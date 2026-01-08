@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mayra Moraes — Consultoria Empresarial NR1</title>
-        <link rel="icon" href="assets/favicon.ico" />
+        <!-- <link rel="icon" href="assets/favicon.ico" /> -->
         <meta name="description" content="Mayra Moraes — consultoria empresarial NR1 com foco em saúde mental no trabalho. Consultoria, treinamentos e suporte para empresas." />
         <meta property="og:title" content="Mayra Moraes — Consultoria Empresarial NR1" />
         <meta property="og:description" content="Consultoria com foco em saúde mental no ambiente de trabalho. Saiba como Mayra pode ajudar sua empresa." />
-        <meta property="og:image" content="assets/header-bg.jpg" />
+        <!-- <meta property="og:image" content="assets/header-bg.jpg" /> -->
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
         {
@@ -65,8 +65,8 @@
         /* Header com efeito spotlight */
         .header {
             position: relative;
-            /* usar image-set (quando disponível) e fallback jpg */
-            background-image: image-set(url('assets/header-bg.webp') 1x, url('assets/header-bg@2x.webp') 2x), url('assets/header-bg.jpg');
+            /* Gradiente elegante substitui imagem de fundo */
+            background: linear-gradient(135deg, #5D81AC 0%, #7a9ec4 50%, #5D81AC 100%);
             min-height: 600px;
             display: flex;
             align-items: center;
@@ -78,8 +78,8 @@
             content: '';
             position: absolute;
             inset: 0;
-            /* overlay mais suave para mostrar foto, mantendo contraste */
-            background: linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.48) 60%, rgba(0,0,0,0.64) 100%);
+            /* overlay sutil para profundidade */
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 100%);
             pointer-events: none;
         }
         
@@ -424,7 +424,7 @@
    <header class="header">
         <div class="header-content">
          <div class="logo">
-            <img src="assets/logo.png" alt="Mayra Moraes" id="logo-img" />
+            <img src="logo.jpg" alt="Mayra Moraes" id="logo-img" />
             <svg viewbox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><!-- fallback monograma M geométrico --> <g transform="translate(60, 20)"><line x1="-35" y1="70" x2="-35" y2="0" stroke="#000000" stroke-width="2.5" stroke-linecap="round" /><line x1="-35" y1="0" x2="0" y2="35" stroke="#000000" stroke-width="2.5" stroke-linecap="round" /><line x1="0" y1="35" x2="35" y2="0" stroke="#000000" stroke-width="2.5" stroke-linecap="round" /><line x1="35" y1="0" x2="35" y2="70" stroke="#000000" stroke-width="2.5" stroke-linecap="round" /></g>
              <text x="60" y="110" font-family="Montserrat, sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#000000" letter-spacing="2">MAYRA MORAES</text>
             </svg>
