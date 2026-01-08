@@ -21,7 +21,8 @@
             "sameAs": []
         }
         </script>
-  <script src="/_sdk/element_sdk.js"></script>
+  <!-- SDK scripts for development environment only -->
+  <script src="/_sdk/element_sdk.js" onerror="console.log('SDK not available - running in production mode')"></script>
   <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
         
@@ -414,7 +415,8 @@
         }
     </style>
   <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <!-- SDK scripts for development environment only -->
+  <script src="/_sdk/data_sdk.js" type="text/javascript" onerror="console.log('Data SDK not available - running in production mode')"></script>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
  </head>
  <body class="h-full">
@@ -446,7 +448,7 @@
      <div class="services-grid">
       <div class="service-card">
        <div class="service-icon">
-        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
         </svg>
        </div>
        <h3 class="service-title" id="service-1-title">Planejamento Estratégico</h3>
@@ -454,7 +456,7 @@
       </div>
       <div class="service-card">
        <div class="service-icon">
-        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
        </div>
        <h3 class="service-title" id="service-2-title">Gestão Financeira</h3>
@@ -462,7 +464,7 @@
       </div>
       <div class="service-card">
        <div class="service-icon">
-        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
        </div>
        <h3 class="service-title" id="service-3-title">Transformação Digital</h3>
