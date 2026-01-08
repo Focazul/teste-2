@@ -6,7 +6,23 @@ Website profissional para Mayra Moraes, consultora empresarial especializada em 
 
 Este site está pronto para ser publicado via GitHub Pages.
 
-### Opção 1: GitHub Pages (Recomendado)
+### Opção 1: GitHub Pages com Actions (Recomendado)
+
+Este repositório já inclui um workflow do GitHub Actions que automaticamente publica o site.
+
+**Configuração inicial:**
+
+1. Acesse as configurações do repositório: `Settings` > `Pages`
+2. Em "Build and deployment" > "Source", selecione **GitHub Actions**
+3. Faça merge desta branch para `main` ou `master`
+4. O workflow será executado automaticamente e o site será publicado
+5. O site estará disponível em: `https://focazul.github.io/teste-2/`
+
+**Para publicações futuras:**
+- Qualquer commit na branch principal (`main` ou `master`) acionará automaticamente uma nova publicação
+- Você também pode acionar manualmente via: `Actions` > `Deploy to GitHub Pages` > `Run workflow`
+
+### Opção 2: GitHub Pages Manual
 
 1. Acesse as configurações do repositório
 2. Vá para "Pages" no menu lateral
@@ -15,7 +31,7 @@ Este site está pronto para ser publicado via GitHub Pages.
 5. Clique em "Save"
 6. O site estará disponível em: `https://focazul.github.io/teste-2/`
 
-### Opção 2: Hospedagem Local
+### Opção 3: Hospedagem Local
 
 Para visualizar o site localmente:
 
