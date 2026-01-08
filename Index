@@ -94,36 +94,38 @@
         
         /* Logo monograma estilizado */
         .logo {
-            margin: 0 auto 2.5rem auto;
-            width: 180px;
-            height: 180px;
+            margin: 40px auto 2.5rem auto;
+            width: 220px;
+            height: 220px;
             background: var(--brand-beige);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 22px 80px rgba(0,0,0,0.45);
             position: relative;
+            border: 6px solid rgba(0,0,0,0.06);
         }
-        
+
         .logo::after {
             content: '';
             position: absolute;
-            inset: -8px;
+            inset: -12px;
             border-radius: 50%;
-            border: 2px solid rgba(241, 236, 225, 0.3);
+            border: 4px solid rgba(241, 236, 225, 0.35);
+            filter: blur(0.2px);
         }
         
         .logo img {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             object-fit: contain;
             display: block;
         }
 
         .logo svg {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             display: none;
         }
         
@@ -401,14 +403,15 @@
             }
             
             .logo {
-                width: 140px;
-                height: 140px;
+                width: 160px;
+                height: 160px;
+                margin: 24px auto 1.25rem auto;
             }
-            
+
             .logo img,
             .logo svg {
-                width: 80px;
-                height: 80px;
+                width: 90px;
+                height: 90px;
             }
         }
     </style>
