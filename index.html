@@ -368,6 +368,278 @@
             margin-top: 1rem;
             text-align: center;
         }
+
+        /* Hero Statistics */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(93,129,172,0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(0,0,0,0.7);
+            margin-top: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            background: var(--brand-white);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--brand-blue);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .benefit-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-title {
+            font-weight: 600;
+            color: var(--brand-black);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .benefit-desc {
+            font-size: 0.95rem;
+            color: rgba(0,0,0,0.7);
+            line-height: 1.5;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+            animation: none;
+        }
+
+        .whatsapp-btn svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-btn svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--brand-white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(93,129,172,0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--brand-blue);
+            opacity: 0.3;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: rgba(0,0,0,0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(93,129,172,0.1);
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand-blue), #7a9ec4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--brand-black);
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: rgba(0,0,0,0.6);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--brand-white);
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(93,129,172,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--brand-black);
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+
+        .faq-item:hover .faq-question {
+            background: rgba(93,129,172,0.05);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--brand-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: rgba(93,129,172,0.02);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: rgba(0,0,0,0.8);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
         
         /* Footer */
         .footer {
@@ -425,10 +697,59 @@
      <div class="hero-card">
       <h1 class="hero-title" id="hero-title">Mayra</h1>
       <p class="hero-subtitle" id="hero-subtitle">Consultoria Empresarial Estratégica</p><a href="#contato" class="hero-cta" id="hero-cta">Agende sua Consultoria</a>
+      <div class="hero-stats">
+       <div class="stat-item">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Anos de Experiência</div>
+       </div>
+       <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Empresas Atendidas</div>
+       </div>
+       <div class="stat-item">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Clientes Satisfeitos</div>
+       </div>
+      </div>
      </div>
     </div>
    </header>
    <main>
+    <section class="section" id="beneficios" style="background: linear-gradient(135deg, rgba(93,129,172,0.05) 0%, rgba(93,129,172,0.02) 100%);">
+     <h2 class="section-title" id="benefits-title">Resultados Mensuráveis</h2>
+     <div class="benefits-grid">
+      <div class="benefit-item">
+       <div class="benefit-number">40%</div>
+       <div class="benefit-title">Redução de Absenteísmo</div>
+       <div class="benefit-desc">Empresas que implementam programas de saúde mental veem diminuição significativa nas faltas.</div>
+      </div>
+      <div class="benefit-item">
+       <div class="benefit-number">28%</div>
+       <div class="benefit-title">Aumento em Produtividade</div>
+       <div class="benefit-desc">Colaboradores mais engajados e bem-estar mental elevam performance operacional.</div>
+      </div>
+      <div class="benefit-item">
+       <div class="benefit-number">3x</div>
+       <div class="benefit-title">ROI Garantido</div>
+       <div class="benefit-desc">Cada real investido em saúde mental retorna multiplicado em resultados empresariais.</div>
+      </div>
+      <div class="benefit-item">
+       <div class="benefit-number">100%</div>
+       <div class="benefit-title">Conformidade NR1</div>
+       <div class="benefit-desc">Atendimento completo às normas regulamentadoras sem exposição a riscos legais.</div>
+      </div>
+      <div class="benefit-item">
+       <div class="benefit-number">60%</div>
+       <div class="benefit-title">Retenção de Talentos</div>
+       <div class="benefit-desc">Ambiente saudável retém profissionais qualificados e reduz turnover.</div>
+      </div>
+      <div class="benefit-item">
+       <div class="benefit-number">85%</div>
+       <div class="benefit-title">Satisfação Corporativa</div>
+       <div class="benefit-desc">Programas estruturados aumentam satisfação geral no ambiente organizacional.</div>
+      </div>
+     </div>
+    </section>
     <section class="section" id="servicos">
      <h2 class="section-title" id="services-title">Nossos Serviços</h2>
      <div class="services-grid">
@@ -466,6 +787,41 @@
       <p style="margin-top: 1.5rem;">Trabalhamos lado a lado com empresários e executivos para criar estratégias que geram resultados mensuráveis e duradouros.</p>
      </div>
     </section>
+    <section class="section" id="depoimentos">
+     <h2 class="section-title" id="testimonials-title">O que Dizem Nossos Clientes</h2>
+     <div class="testimonials-grid">
+      <div class="testimonial-card">
+       <p class="testimonial-text">"A Mayra transformou completamente a cultura de saúde mental na nossa empresa. Os resultados apareceram em 3 meses. Recomendo para qualquer gestora sria."</p>
+       <div class="testimonial-author">
+        <div class="author-avatar">CZ</div>
+        <div class="author-info">
+         <h4>Carlos Zambra</h4>
+         <p>CEO, TechSolutions Brasil</p>
+        </div>
+       </div>
+      </div>
+      <div class="testimonial-card">
+       <p class="testimonial-text">"Profissionalismo, expertise e resultados reais. Mayra entende os desafios de empresas em crescimento e oferece soluções que funciona."</p>
+       <div class="testimonial-author">
+        <div class="author-avatar">AK</div>
+        <div class="author-info">
+         <h4>Amanda Kaufmann</h4>
+         <p>Diretora de RH, Inovação Industrial</p>
+        </div>
+       </div>
+      </div>
+      <div class="testimonial-card">
+       <p class="testimonial-text">"Consultoria NR1 não é luxo, é necessidade. Mayra ajudou nossa empresa a não apenas cumprir regulações mas criar impacto real."</p>
+       <div class="testimonial-author">
+        <div class="author-avatar">MC</div>
+        <div class="author-info">
+         <h4>Marco Cortez</h4>
+         <p>Gerente de Compliance, Construtura Magna</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
     <section class="section" id="contato">
      <h2 class="section-title" id="contact-title">Entre em Contato</h2>
      <form class="contact-form" id="contact-form">
@@ -482,11 +838,57 @@
       </div>
      </form>
     </section>
+    <section class="section" id="faq" style="background: linear-gradient(135deg, rgba(93,129,172,0.05) 0%, rgba(93,129,172,0.02) 100%);">
+     <h2 class="section-title" id="faq-title">Perguntas Frequentes</h2>
+     <div class="faq-container">
+      <div class="faq-item">
+       <div class="faq-question">O que é NR1 exatamente?</div>
+       <div class="faq-answer">
+        <p>A Norma Regulamentadora 1 é o fundamento do sistema de segurança e saúde no trabalho. Estabelece diretrizes para programas de proteção da saúde mental e bem-estar ocupacional nas empresas. É requisito legal para todas as organizações brasileiras.</p>
+       </div>
+      </div>
+      <div class="faq-item">
+       <div class="faq-question">Quanto tempo até ver resultados?</div>
+       <div class="faq-answer">
+        <p>Resultados iniciais aparecem entre 30-60 dias. Transformações estruturais ocorrem em 3-6 meses. Consolidação e sustentabilidade entre 6-12 meses. Oferecemos acompanhamento contínuo durante todo o processo.</p>
+       </div>
+      </div>
+      <div class="faq-item">
+       <div class="faq-question">Qual é a faixa de investimento?</div>
+       <div class="faq-answer">
+        <p>Os valores variam conforme tamanho da empresa, complexidade dos desafios e escopo do programa. Oferecemos consultoria diagnóstica gratuita para empresas interessadas, com proposta personalizada sem comprometimento.</p>
+       </div>
+      </div>
+      <div class="faq-item">
+       <div class="faq-question">Serve para empresas pequenas e startups?</div>
+       <div class="faq-answer">
+        <p>Absolutamente. Adaptamos soluções para micro, pequenas, médias e grandes empresas. Inclusive oferecemos programas escaláveis especialmente desenhados para startups em crescimento.</p>
+       </div>
+      </div>
+      <div class="faq-item">
+       <div class="faq-question">Vocês oferecem suporte contínuo?</div>
+       <div class="faq-answer">
+        <p>Sim. Oferecemos pacotes de acompanhamento mensal, trimestral ou anual. Mantemos relacionamento estratégico com nossos clientes para evolução contínua dos programas.</p>
+       </div>
+      </div>
+      <div class="faq-item">
+       <div class="faq-question">Como é o processo de implementação?</div>
+       <div class="faq-answer">
+        <p>Seguimos 5 fases: (1) Diagnóstico profundo, (2) Design do programa, (3) Implementação com treinamento, (4) Acompanhamento, (5) Otimização. Cada fase é estruturada para máximo impacto.</p>
+       </div>
+      </div>
+     </div>
+    </section>
    </main>
    <footer class="footer">
     <p>© 2024 Mayra Consultoria Empresarial. Todos os direitos reservados.</p>
    </footer>
   </div>
+  <a href="https://wa.me/55?text=Olá Mayra, tenho interesse em consultoria" class="whatsapp-btn" title="Fale conosco pelo WhatsApp">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.968 1.495c-1.533.867-2.582 2.098-2.582 3.769 0 1.671 1.049 3.19 2.582 4.057 1.533.867 3.708 1.495 4.968 1.495 1.259 0 3.435-.628 4.968-1.495 1.533-.867 2.582-2.386 2.582-4.057 0-1.671-1.049-2.902-2.582-3.769a9.87 9.87 0 00-4.968-1.495M2.982 21c1.884-1.033 4.158-1.594 6.5-1.594s4.616.561 6.5 1.594c1.884 1.033 3.354 2.483 4.333 4.17-1.883 1.032-4.157 1.593-6.5 1.593s-4.616-.561-6.5-1.594c-1.883-1.032-3.353-2.482-4.333-4.169z"/>
+   </svg>
+  </a>
   <script>
         const defaultConfig = {
             hero_title: "Mayra",
@@ -602,6 +1004,14 @@
                 this.reset();
                 successMessage.style.display = 'none';
             }, 4000);
+        });
+
+        // FAQ interativo
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+            });
         });
         
         // Inicializar SDK (apenas se disponível - não funciona em deploy estático)
