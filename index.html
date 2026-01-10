@@ -94,21 +94,27 @@
             overflow: hidden;
         }
         
+        /* Linha decorativa vertical sutil */
         .header::before {
             content: '';
             position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse 800px 600px at 25% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
-                radial-gradient(ellipse 600px 500px at 75% 50%, rgba(0,0,0,0.06) 0%, transparent 50%);
-            pointer-events: none;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3), transparent);
+            z-index: 1;
         }
         
         .header::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.04) 100%);
+            background: 
+                radial-gradient(ellipse 800px 600px at 25% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 600px 500px at 75% 50%, rgba(0,0,0,0.06) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.04) 100%);
             pointer-events: none;
         }
         
@@ -135,25 +141,24 @@
                         inset 0 0 20px rgba(0,0,0,0.02);
             position: relative;
             border: 1px solid rgba(0,0,0,0.05);
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .logo:hover {
-            transform: scale(1.02);
+            transform: translateY(-4px);
+            box-shadow: 
+                0 4px 30px rgba(93, 129, 172, 0.12),
+                0 12px 50px rgba(0, 0, 0, 0.06);
         }
 
+        /* Anel decorativo externo */
         .logo::after {
             content: '';
             position: absolute;
-            inset: -8px;
+            inset: -16px;
             border-radius: 50%;
-            border: 1px solid rgba(93, 129, 172, 0.15);
-            animation: subtle-glow 3s ease-in-out infinite;
-        }
-
-        @keyframes subtle-glow {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
+            border: 1px solid rgba(93, 129, 172, 0.12);
         }
         
         .logo img {
@@ -208,7 +213,7 @@
             .logo img, .logo svg { width: 110px; height: 110px; }
         }
 
-        /* Typography — Hierarchy & Elegance */
+        /* Typography — Hierarchy & Elegance with Animations */
         
         .hero-title {
             font-family: 'Cormorant Garamond', serif;
@@ -219,6 +224,7 @@
             letter-spacing: 0.8px;
             line-height: 1.2;
             font-variation-settings: "wght" 700;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
         }
         
         .hero-subtitle {
@@ -228,6 +234,19 @@
             font-weight: 400;
             letter-spacing: 0.6px;
             line-height: 1.5;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        /* Animação FadeInUp Premium */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         /* CTA Button — Sophisticated & Functional */
@@ -246,6 +265,7 @@
             box-shadow: var(--shadow-medium);
             border: 2px solid transparent;
             cursor: pointer;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
         }
         
         .hero-cta:hover {
@@ -266,6 +286,14 @@
             padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        /* Container do cabeçalho de seção */
+        .section-header {
+            text-align: center;
+            margin-bottom: 0;
+            position: relative;
         }
         
         .section-title {
@@ -273,23 +301,36 @@
             font-size: 3rem;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 1.5rem;
             color: var(--brand-black);
             position: relative;
-            padding-bottom: 1.5rem;
             letter-spacing: 0.5px;
+            z-index: 1;
         }
-        
-        .section-title::after {
-            content: '';
+
+        /* Número decorativo de seção em background */
+        .section-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 6rem;
+            font-weight: 300;
+            color: var(--brand-blue);
+            opacity: 0.08;
             position: absolute;
-            bottom: 0;
+            top: -2.5rem;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 0;
+            pointer-events: none;
+            line-height: 1;
+        }
+        
+        /* Divider decorativo refinado */
+        .section-divider {
             width: 60px;
             height: 2px;
             background: var(--brand-blue);
-            opacity: 0.6;
+            margin: 2rem auto 3.5rem auto;
+            opacity: 0.5;
         }
         
         /* ═════════════════════════════════════════════════════════════
@@ -303,6 +344,7 @@
             margin-top: 3.5rem;
             padding-top: 3rem;
             border-top: 1px solid rgba(93, 129, 172, 0.15);
+            animation: fadeInUp 0.8s ease-out 0.8s backwards;
         }
 
         .stat-item {
@@ -427,22 +469,24 @@
             padding: 3rem 2.5rem;
             border-radius: 12px;
             box-shadow: var(--shadow-light);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid var(--border-light);
             position: relative;
             overflow: hidden;
         }
 
+        /* Barra superior animada */
         .service-card::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(93, 129, 172, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
-            transition: all 0.6s ease;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand-blue-light), var(--brand-blue-dark));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .service-card:hover {
@@ -451,8 +495,23 @@
         }
 
         .service-card:hover::before {
-            top: -30%;
-            right: -30%;
+            transform: scaleX(1);
+        }
+        
+        /* Número decorativo do serviço */
+        .service-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 300;
+            color: var(--brand-blue);
+            margin-bottom: 1.5rem;
+            line-height: 1;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover .service-number {
+            opacity: 0.5;
         }
         
         .service-icon {
@@ -961,7 +1020,11 @@
    </header>
    <main>
     <section class="section" id="beneficios" style="background: linear-gradient(135deg, rgba(93,129,172,0.05) 0%, rgba(93,129,172,0.02) 100%);">
-     <h2 class="section-title" id="benefits-title">Resultados Mensuráveis</h2>
+     <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title" id="benefits-title">Resultados Mensuráveis</h2>
+      <div class="section-divider"></div>
+     </div>
      <div class="benefits-grid">
       <div class="benefit-item">
        <div class="benefit-number">40%</div>
@@ -996,9 +1059,14 @@
      </div>
     </section>
     <section class="section" id="servicos">
-     <h2 class="section-title" id="services-title">Nossos Serviços</h2>
+     <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title" id="services-title">Nossos Serviços</h2>
+      <div class="section-divider"></div>
+     </div>
      <div class="services-grid">
       <div class="service-card">
+       <div class="service-number">01</div>
        <div class="service-icon">
         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
         </svg>
@@ -1007,6 +1075,7 @@
        <p class="service-desc">Desenvolvemos estratégias customizadas para impulsionar o crescimento sustentável do seu negócio.</p>
       </div>
       <div class="service-card">
+       <div class="service-number">02</div>
        <div class="service-icon">
         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
@@ -1015,6 +1084,7 @@
        <p class="service-desc">Otimizamos processos financeiros para maximizar resultados e garantir saúde econômica.</p>
       </div>
       <div class="service-card">
+       <div class="service-number">03</div>
        <div class="service-icon">
         <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
@@ -1025,7 +1095,11 @@
      </div>
     </section>
     <section class="section" id="sobre" style="background: var(--brand-white);">
-     <h2 class="section-title" id="about-title">Sobre Mayra</h2>
+     <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title" id="about-title">Sobre Mayra</h2>
+      <div class="section-divider"></div>
+     </div>
      <div class="about-content">
       <p>Com mais de 15 anos de experiência em consultoria empresarial, a Mayra oferece soluções personalizadas que transformam desafios em oportunidades de crescimento.</p>
       <p style="margin-top: 1.5rem;">Nossa abordagem combina análise estratégica profunda, metodologias comprovadas e um compromisso genuíno com o sucesso de cada cliente.</p>
@@ -1033,7 +1107,11 @@
      </div>
     </section>
     <section class="section" id="depoimentos">
-     <h2 class="section-title" id="testimonials-title">O que Dizem Nossos Clientes</h2>
+     <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title" id="testimonials-title">O que Dizem Nossos Clientes</h2>
+      <div class="section-divider"></div>
+     </div>
      <div class="testimonials-grid">
       <div class="testimonial-card">
        <p class="testimonial-text">"A Mayra transformou completamente a cultura de saúde mental na nossa empresa. Os resultados apareceram em 3 meses. Recomendo para qualquer gestora sria."</p>
@@ -1068,7 +1146,11 @@
      </div>
     </section>
     <section class="section" id="contato">
-     <h2 class="section-title" id="contact-title">Entre em Contato</h2>
+     <div class="section-header">
+      <span class="section-number">05</span>
+      <h2 class="section-title" id="contact-title">Entre em Contato</h2>
+      <div class="section-divider"></div>
+     </div>
      <form class="contact-form" id="contact-form">
       <div class="form-group"><label for="name">Nome</label> <input type="text" id="name" name="name" required>
       </div>
@@ -1084,7 +1166,11 @@
      </form>
     </section>
     <section class="section" id="faq" style="background: linear-gradient(135deg, rgba(93,129,172,0.05) 0%, rgba(93,129,172,0.02) 100%);">
-     <h2 class="section-title" id="faq-title">Perguntas Frequentes</h2>
+     <div class="section-header">
+      <span class="section-number">06</span>
+      <h2 class="section-title" id="faq-title">Perguntas Frequentes</h2>
+      <div class="section-divider"></div>
+     </div>
      <div class="faq-container">
       <div class="faq-item">
        <div class="faq-question">O que é NR1 exatamente?</div>
