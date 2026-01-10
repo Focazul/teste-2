@@ -66,9 +66,9 @@
         /* Header com efeito spotlight */
         .header {
             position: relative;
-            /* Gradiente elegante substitui imagem de fundo */
-            background: linear-gradient(135deg, #5D81AC 0%, #7a9ec4 50%, #5D81AC 100%);
-            min-height: 600px;
+            /* Gradiente profissional com profundidade e contraste */
+            background: linear-gradient(135deg, #6B92C8 0%, #5D81AC 25%, #4A7BA7 50%, #5D81AC 75%, #6B92C8 100%);
+            min-height: 700px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -79,8 +79,17 @@
             content: '';
             position: absolute;
             inset: 0;
-            /* overlay sutil para profundidade */
-            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.15) 100%);
+            /* Padrão sutil que realça profundidade sem obscurecer texto */
+            background: radial-gradient(circle at 20% 50%, rgba(107, 146, 200, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(74, 123, 167, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.08) 100%);
             pointer-events: none;
         }
         
@@ -132,49 +141,32 @@
         
         /* Card hero flutuante */
         .hero-card {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            padding: 0;
+            padding: 3rem 2.5rem;
+            z-index: 2;
+            position: relative;
+            text-align: center;
             background: transparent;
             box-shadow: none;
             border: none;
         }
 
         .hero-content {
-            padding: 2rem;
-            z-index: 2;
             position: relative;
+            z-index: 3;
         }
 
         .hero-image {
-            position: relative;
-            height: 500px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-
-        .hero-image img {
-            max-height: 100%;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 10px 40px rgba(0,0,0,0.2));
+            display: none;
         }
         
         @media (max-width: 880px) {
+            .header {
+                min-height: 600px;
+            }
             .hero-card {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            .hero-content {
-                text-align: center;
-            }
-            .hero-image {
-                height: 350px;
+                padding: 2rem 1.5rem;
             }
         }
         @media (max-width:480px){
