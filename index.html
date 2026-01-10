@@ -132,20 +132,50 @@
         
         /* Card hero flutuante */
         .hero-card {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: linear-gradient(135deg, rgba(241,236,225,0.98), rgba(241,236,225,0.95));
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 3rem 2.5rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-            border: 1px solid rgba(255,255,255,0.5);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+            border: none;
+        }
+
+        .hero-content {
+            padding: 2rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-height: 100%;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 40px rgba(0,0,0,0.2));
         }
         
         @media (max-width: 880px) {
-            .hero-card{ flex-direction:column; text-align:center }
-            .hero-right{ width:120px }
-            .hero-badge svg{ width:110px; height:110px }
+            .hero-card {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .hero-content {
+                text-align: center;
+            }
+            .hero-image {
+                height: 350px;
+            }
         }
         @media (max-width:480px){
             .hero{ min-height:420px }
@@ -159,12 +189,12 @@
         
         .hero-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem;
+            font-size: 3.2rem;
             font-weight: 700;
             color: var(--brand-black);
-            margin-bottom: 0.75rem;
-            letter-spacing: 2px;
-            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            line-height: 1.15;
         }
         
         .hero-subtitle {
@@ -690,26 +720,32 @@
         <div class="header-content">
          <div class="logo">
             <img src="logo.jpg" alt="Mayra Moraes" id="logo-img" />
-            <svg viewbox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><!-- fallback monograma M geométrico --> <g transform="translate(60, 20)"><line x1="-35" y1="70" x2="-35" y2="0" stroke="#000000" stroke-width="2.5" stroke-linecap="round" /><line x1="-35" y1="0" x2="0" y2="35" stroke="#000000" stroke-width="2.5" stroke-linecap="round" /><line x1="0" y1="35" x2="35" y2="0" stroke="#000000" stroke-width="2.5" stroke-linecap="round" /><line x1="35" y1="0" x2="35" y2="70" stroke="#000000" stroke-width="2.5" stroke-linecap="round" /></g>
-             <text x="60" y="110" font-family="Montserrat, sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#000000" letter-spacing="2">MAYRA MORAES</text>
+            <svg viewbox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><!-- fallback monograma M geométrico --> <g transform="translate(60, 20)"><line x1="-35" y1="70" x2="-35" y2="0" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" /><line x1="-35" y1="0" x2="0" y2="35" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" /><line x1="0" y1="35" x2="35" y2="0" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" /><line x1="35" y1="0" x2="35" y2="70" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" /></g>
+             <text x="60" y="110" font-family="Montserrat, sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#FFFFFF" letter-spacing="2">MAYRA MORAES</text>
             </svg>
          </div>
      <div class="hero-card">
-      <h1 class="hero-title" id="hero-title">Mayra</h1>
-      <p class="hero-subtitle" id="hero-subtitle">Consultoria Empresarial Estratégica</p><a href="#contato" class="hero-cta" id="hero-cta">Agende sua Consultoria</a>
-      <div class="hero-stats">
-       <div class="stat-item">
-        <div class="stat-number">15+</div>
-        <div class="stat-label">Anos de Experiência</div>
+      <div class="hero-content">
+       <h1 class="hero-title" id="hero-title">Qual é o real custo da saúde mental negligenciada na sua empresa?</h1>
+       <p class="hero-subtitle" id="hero-subtitle">Transforme a cultura organizacional com consultoria NR1 comprovada</p>
+       <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria de saúde mental para minha empresa" class="hero-cta" id="hero-cta">Agende sua Consultoria</a>
+       <div class="hero-stats">
+        <div class="stat-item">
+         <div class="stat-number">15+</div>
+         <div class="stat-label">Anos de Experiência</div>
+        </div>
+        <div class="stat-item">
+         <div class="stat-number">100+</div>
+         <div class="stat-label">Empresas Atendidas</div>
+        </div>
+        <div class="stat-item">
+         <div class="stat-number">95%</div>
+         <div class="stat-label">Clientes Satisfeitos</div>
+        </div>
        </div>
-       <div class="stat-item">
-        <div class="stat-number">100+</div>
-        <div class="stat-label">Empresas Atendidas</div>
-       </div>
-       <div class="stat-item">
-        <div class="stat-number">95%</div>
-        <div class="stat-label">Clientes Satisfeitos</div>
-       </div>
+      </div>
+      <div class="hero-image">
+       <img src="fundo.png" alt="Mayra Moraes - Consultora" id="hero-img" />
       </div>
      </div>
     </div>
@@ -884,7 +920,7 @@
     <p>© 2024 Mayra Consultoria Empresarial. Todos os direitos reservados.</p>
    </footer>
   </div>
-  <a href="https://wa.me/55?text=Olá Mayra, tenho interesse em consultoria" class="whatsapp-btn" title="Fale conosco pelo WhatsApp">
+  <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria" class="whatsapp-btn" title="Fale conosco pelo WhatsApp">
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.968 1.495c-1.533.867-2.582 2.098-2.582 3.769 0 1.671 1.049 3.19 2.582 4.057 1.533.867 3.708 1.495 4.968 1.495 1.259 0 3.435-.628 4.968-1.495 1.533-.867 2.582-2.386 2.582-4.057 0-1.671-1.049-2.902-2.582-3.769a9.87 9.87 0 00-4.968-1.495M2.982 21c1.884-1.033 4.158-1.594 6.5-1.594s4.616.561 6.5 1.594c1.884 1.033 3.354 2.483 4.333 4.17-1.883 1.032-4.157 1.593-6.5 1.593s-4.616-.561-6.5-1.594c-1.883-1.032-3.353-2.482-4.333-4.169z"/>
    </svg>
