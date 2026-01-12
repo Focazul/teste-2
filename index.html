@@ -1,1454 +1,288 @@
 <!doctype html>
-<html lang="pt-br" class="h-full">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mayra Moraes — Consultoria Empresarial NR1</title>
-        <!-- <link rel="icon" href="assets/favicon.ico" /> -->
-        <meta name="description" content="Mayra Moraes — consultoria empresarial NR1 com foco em saúde mental no trabalho. Consultoria, treinamentos e suporte para empresas." />
-        <meta property="og:title" content="Mayra Moraes — Consultoria Empresarial NR1" />
-        <meta property="og:description" content="Consultoria com foco em saúde mental no ambiente de trabalho. Saiba como Mayra pode ajudar sua empresa." />
-        <!-- <meta property="og:image" content="assets/header-bg.jpg" /> -->
-        <meta property="og:type" content="website" />
-        <!-- Deploy: 2026-01-09 -->
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Mayra Moraes",
-            "jobTitle": "Consultora Empresarial",
-            "description": "Consultoria NR1 com foco em saúde mental no trabalho.",
-            "url": "",
-            "sameAs": []
-        }
-        </script>
-  <!-- SDKs removidos - não disponíveis em deploy estático -->
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mayra Moraes — Saúde Mental com Seriedade [OPÇÃO 5: ACOLHEDOR]</title>
+  <meta name="description" content="Assistente Social especializada em NR-1, vícios em jogos/apostas online e saúde mental empresarial.">
+  <meta property="og:title" content="Mayra Moraes — Saúde Mental com Seriedade" />
+  <meta property="og:description" content="Atendimento individual, consultoria NR-1 e mentoria para famílias." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --brand-blue: #5D81AC;
-            --brand-blue-light: #6B92C8;
-            --brand-blue-dark: #4A7BA7;
-            --brand-beige: #F1ECE1;
-            --brand-black: #000000;
-            --brand-white: #FFFFFF;
-            --brand-gold: #C4A962;
-            --text-secondary: rgba(0, 0, 0, 0.65);
-            --border-light: rgba(93, 129, 172, 0.08);
-            --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 12px 36px rgba(0, 0, 0, 0.12);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html, body {
-            height: 100%;
-            width: 100%;
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--brand-beige);
-            color: var(--brand-black);
-            overflow-x: hidden;
-            font-size: 16px;
-            line-height: 1.6;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-        }
-        
-        .wrapper {
-            width: 100%;
-            height: 100%;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-        
-        /* ═════════════════════════════════════════════════════════════
-           HEADER & HERO SECTION — Luxury Minimalism
-           ═════════════════════════════════════════════════════════════ */
-        
-        .header {
-            position: relative;
-            background: #000000;
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding: 5rem 2rem;
-        }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse 700px 500px at 50% 40%, rgba(93, 129, 172, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        
-        .header::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle 400px at 20% 60%, rgba(93, 129, 172, 0.03) 0%, transparent 60%);
-            pointer-events: none;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Logo — Minimalista Premium com Halo (Dark) */
-        .logo {
-            margin: 0 auto 2.5rem auto;
-            width: 160px;
-            height: 160px;
-            background: var(--brand-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 
-                0 0 0 1px rgba(93, 129, 172, 0.15),
-                0 4px 20px rgba(93, 129, 172, 0.12),
-                0 8px 40px rgba(93, 129, 172, 0.15),
-                inset 0 0 20px rgba(241, 236, 225, 0.5);
-            position: relative;
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .logo:hover {
-            transform: translateY(-3px);
-            box-shadow: 
-                0 0 0 1px rgba(93, 129, 172, 0.25),
-                0 6px 28px rgba(93, 129, 172, 0.2),
-                0 12px 56px rgba(93, 129, 172, 0.25);
-        }
-
-        /* Halo externo sutil (Dark) */
-        .logo::after {
-            content: '';
-            position: absolute;
-            inset: -20px;
-            border-radius: 50%;
-            border: 1px solid rgba(93, 129, 172, 0.15);
-            opacity: 0.5;
-        }
-
-        .logo::before {
-            content: '';
-            position: absolute;
-            inset: -12px;
-            border-radius: 50%;
-            border: 1px solid rgba(93, 129, 172, 0.12);
-            opacity: 0.6;
-        }
-        
-        .logo img {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            display: block;
-            border-radius: 50%;
-        }
-
-        .logo svg {
-            width: 140px;
-            height: 140px;
-            display: none;
-        }
-        
-        /* Hero Card — Centralizado e Minimalista */
-        .hero-card {
-            max-width: 750px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            z-index: 2;
-            position: relative;
-            text-align: center;
-            background: transparent;
-            box-shadow: none;
-            border: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-        }
-
-        .hero-image {
-            display: none;
-        }
-        
-        @media (max-width: 880px) {
-            .header {
-                min-height: 580px;
-                padding: 4rem 1.5rem;
-            }
-            .hero-card {
-                padding: 0 1.5rem;
-            }
-            .logo {
-                width: 140px;
-                height: 140px;
-                margin-bottom: 2rem;
-            }
-            .logo img, .logo svg {
-                width: 100px;
-                height: 100px;
-            }
-        }
-        
-        @media (max-width: 480px){
-            .header { 
-                min-height: 520px; 
-                padding: 3rem 1.25rem;
-            }
-            .hero-title { 
-                font-size: 2.4rem;
-                letter-spacing: 0.02em;
-            }
-            .hero-subtitle { 
-                font-size: 0.75rem;
-                letter-spacing: 0.15em;
-            }
-            .hero-description {
-                font-size: 0.95rem;
-                margin-bottom: 2rem;
-            }
-            .logo { 
-                width: 120px; 
-                height: 120px; 
-                margin-bottom: 1.5rem;
-            }
-            .logo img, .logo svg { 
-                width: 85px; 
-                height: 85px; 
-            }
-        }
-
-        /* Typography — Editorial Minimalista Premium Dark */
-        
-        .hero-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.8rem;
-            font-weight: 400;
-            color: #FFFFFF;
-            margin-bottom: 1rem;
-            letter-spacing: 0.03em;
-            line-height: 1.15;
-            animation: fadeInUp 0.8s ease-out 0.2s backwards;
-        }
-        
-        .hero-subtitle {
-            font-size: 0.85rem;
-            color: rgba(93, 129, 172, 1);
-            margin-bottom: 1.8rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            line-height: 1.6;
-            animation: fadeInUp 0.8s ease-out 0.4s backwards;
-        }
-
-        /* Descrição elegante */
-        .hero-description {
-            font-size: 1.05rem;
-            font-weight: 300;
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 550px;
-            margin: 0 auto 2.5rem auto;
-            line-height: 1.75;
-            animation: fadeInUp 0.8s ease-out 0.5s backwards;
-        }
-
-        /* Animação FadeInUp Premium */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* CTA Button — Minimalista Elegante */
-        .hero-cta {
-            display: inline-block;
-            padding: 1rem 3rem;
-            background: var(--brand-blue);
-            color: var(--brand-white);
-            border-radius: 50px;
-            font-weight: 500;
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 20px rgba(93, 129, 172, 0.2);
-            border: none;
-            cursor: pointer;
-            animation: fadeInUp 0.8s ease-out 0.6s backwards;
-        }
-        
-        .hero-cta:hover {
-            background: var(--brand-blue-dark);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .hero-cta:active {
-            transform: translateY(-1px);
-        }
-        
-        /* ═════════════════════════════════════════════════════════════
-           SECTIONS — Clean & Organized
-           ═════════════════════════════════════════════════════════════ */
-        
-        .section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        /* Container do cabeçalho de seção */
-        .section-header {
-            text-align: center;
-            margin-bottom: 0;
-            position: relative;
-        }
-        
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: var(--brand-black);
-            position: relative;
-            letter-spacing: 0.5px;
-            z-index: 1;
-        }
-
-        /* Número decorativo de seção em background */
-        .section-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 6rem;
-            font-weight: 300;
-            color: var(--brand-blue);
-            opacity: 0.08;
-            position: absolute;
-            top: -2.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 0;
-            pointer-events: none;
-            line-height: 1;
-        }
-        
-        /* Divider decorativo refinado */
-        .section-divider {
-            width: 60px;
-            height: 2px;
-            background: var(--brand-blue);
-            margin: 2rem auto 3.5rem auto;
-            opacity: 0.5;
-        }
-        
-        /* ═════════════════════════════════════════════════════════════
-           STATISTICS — Premium Display
-           ═════════════════════════════════════════════════════════════ */
-        
-        .hero-stats {
-            display: none;
-        }
-
-        .stat-item {
-            text-align: center;
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .stat-item:hover {
-            transform: translateY(-4px);
-        }
-
-        .stat-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--brand-blue);
-            line-height: 1;
-            margin-bottom: 0.6rem;
-            letter-spacing: 0.3px;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        @media (max-width: 768px) {
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                margin-top: 2.5rem;
-                padding-top: 2rem;
-            }
-
-            .stat-number {
-                font-size: 2.2rem;
-            }
-        }
-
-        /* ═════════════════════════════════════════════════════════════
-           BENEFITS — Elegant Grid with Accents
-           ═════════════════════════════════════════════════════════════ */
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3.5rem;
-        }
-
-        .benefit-item {
-            background: var(--brand-white);
-            padding: 2.5rem 2.2rem;
-            border-radius: 12px;
-            border-left: 3px solid var(--brand-blue);
-            box-shadow: var(--shadow-light);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .benefit-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            background: radial-gradient(circle, rgba(93, 129, 172, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .benefit-item:hover {
-            transform: translateX(6px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .benefit-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--brand-blue);
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .benefit-title {
-            font-weight: 600;
-            color: var(--brand-black);
-            margin-bottom: 0.8rem;
-            font-size: 1.05rem;
-            position: relative;
-            z-index: 1;
-            letter-spacing: 0.3px;
-        }
-
-        .benefit-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ═════════════════════════════════════════════════════════════
-           SERVICES — Card-Based Grid
-           ═════════════════════════════════════════════════════════════ */
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3.5rem;
-        }
-        
-        .service-card {
-            background: var(--brand-white);
-            padding: 3rem 2.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-light);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid var(--border-light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Barra superior animada */
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--brand-blue-light), var(--brand-blue-dark));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        /* Número decorativo do serviço */
-        .service-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem;
-            font-weight: 300;
-            color: var(--brand-blue);
-            margin-bottom: 1.5rem;
-            line-height: 1;
-            opacity: 0.3;
-            transition: opacity 0.3s ease;
-        }
-
-        .service-card:hover .service-number {
-            opacity: 0.5;
-        }
-        
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--brand-blue-light), var(--brand-blue-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            opacity: 0.85;
-            transition: opacity 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-card:hover .service-icon {
-            opacity: 1;
-        }
-        
-        .service-icon svg {
-            width: 28px;
-            height: 28px;
-            stroke: var(--brand-white);
-            fill: none;
-            stroke-width: 1.5;
-        }
-        
-        .service-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--brand-black);
-            position: relative;
-            z-index: 1;
-            letter-spacing: 0.2px;
-        }
-        
-        .service-desc {
-            color: var(--text-secondary);
-            line-height: 1.65;
-            font-size: 0.95rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* ═════════════════════════════════════════════════════════════
-           ABOUT SECTION — Centered Content
-           ═════════════════════════════════════════════════════════════ */
-        
-        .about-content {
-            max-width: 750px;
-            margin: 0 auto;
-            background: var(--brand-white);
-            padding: 3.5rem 3rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-light);
-            line-height: 1.8;
-            font-size: 1.01rem;
-            color: var(--text-secondary);
-            border: 1px solid var(--border-light);
-        }
-
-        .about-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* ═════════════════════════════════════════════════════════════
-           TESTIMONIALS — Social Proof Section
-           ═════════════════════════════════════════════════════════════ */
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3.5rem;
-        }
-
-        .testimonial-card {
-            background: var(--brand-white);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-light);
-            border: 1px solid var(--border-light);
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .testimonial-card:hover {
-            box-shadow: var(--shadow-medium);
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 10px;
-            left: 18px;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.8rem;
-            color: var(--brand-blue);
-            opacity: 0.2;
-        }
-
-        .testimonial-text {
-            font-size: 0.98rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-            letter-spacing: 0.2px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-light);
-        }
-
-        .author-avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--brand-blue-light), var(--brand-blue-dark));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-right: 1rem;
-            flex-shrink: 0;
-        }
-
-        .author-info h4 {
-            font-weight: 600;
-            color: var(--brand-black);
-            font-size: 0.93rem;
-            margin-bottom: 0.25rem;
-            letter-spacing: 0.2px;
-        }
-
-        .author-info p {
-            font-size: 0.82rem;
-            color: rgba(0, 0, 0, 0.5);
-            letter-spacing: 0.2px;
-        }
-
-        /* ═════════════════════════════════════════════════════════════
-           CONTACT FORM — Elegant Input Design
-           ═════════════════════════════════════════════════════════════ */
-        
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--brand-white);
-            padding: 3.5rem 3rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-light);
-            border: 1px solid var(--border-light);
-        }
-        
-        .form-group {
-            margin-bottom: 1.8rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.6rem;
-            font-weight: 500;
-            color: var(--brand-black);
-            font-size: 0.92rem;
-            letter-spacing: 0.3px;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.85rem 1.1rem;
-            border: 1px solid rgba(93, 129, 172, 0.18);
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            background: #fafbfc;
-            letter-spacing: 0.2px;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--brand-blue);
-            background: var(--brand-white);
-            box-shadow: 0 0 0 3px rgba(93, 129, 172, 0.08);
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 130px;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 0.95rem 2rem;
-            background: var(--brand-blue);
-            color: var(--brand-white);
-            border: none;
-            border-radius: 40px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            cursor: pointer;
-            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-            font-family: 'Montserrat', sans-serif;
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .submit-btn:hover {
-            background: var(--brand-blue-dark);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .submit-btn:active {
-            transform: translateY(-1px);
-        }
-        
-        .success-message {
-            display: none;
-            padding: 1.2rem;
-            background: #ecf9f3;
-            color: #0d6e4a;
-            border-radius: 8px;
-            border-left: 3px solid #25D366;
-            margin-top: 1.2rem;
-            text-align: center;
-            font-size: 0.95rem;
-            animation: slide-in 0.3s ease-out;
-        }
-
-        @keyframes slide-in {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ═════════════════════════════════════════════════════════════
-           FAQ SECTION — Interactive & Clean
-           ═════════════════════════════════════════════════════════════ */
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--brand-white);
-            margin-bottom: 0.8rem;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid var(--border-light);
-            transition: all 0.3s ease;
-        }
-
-        .faq-item.active {
-            box-shadow: var(--shadow-medium);
-            border-color: rgba(93, 129, 172, 0.15);
-        }
-
-        .faq-question {
-            padding: 1.5rem 1.8rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 500;
-            color: var(--brand-black);
-            user-select: none;
-            transition: all 0.3s ease;
-            letter-spacing: 0.2px;
-        }
-
-        .faq-item:hover .faq-question {
-            background: rgba(93, 129, 172, 0.03);
-        }
-
-        .faq-question::after {
-            content: '+';
-            font-size: 1.4rem;
-            color: var(--brand-blue);
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            flex-shrink: 0;
-            margin-left: 1rem;
-        }
-
-        .faq-item.active .faq-question::after {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            background: rgba(93, 129, 172, 0.02);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 350px;
-        }
-
-        .faq-answer p {
-            padding: 0 1.8rem 1.5rem 1.8rem;
-            color: var(--text-secondary);
-            line-height: 1.75;
-            font-size: 0.95rem;
-            letter-spacing: 0.2px;
-        }
-
-        /* ═════════════════════════════════════════════════════════════
-           WHATSAPP BUTTON — Fixed Action Button
-           ═════════════════════════════════════════════════════════════ */
-        
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 32px;
-            right: 32px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: var(--shadow-medium);
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            z-index: 999;
-            border: none;
-            cursor: pointer;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .whatsapp-btn:active {
-            transform: scale(0.95);
-        }
-
-        .whatsapp-btn svg {
-            width: 32px;
-            height: 32px;
-            fill: white;
-        }
-
-        @media (max-width: 768px) {
-            .whatsapp-btn {
-                bottom: 24px;
-                right: 24px;
-                width: 56px;
-                height: 56px;
-            }
-
-            .whatsapp-btn svg {
-                width: 28px;
-                height: 28px;
-            }
-        }
-
-        /* ═════════════════════════════════════════════════════════════
-           FOOTER — Clean & Minimal
-           ═════════════════════════════════════════════════════════════ */
-        
-        .footer {
-            background: var(--brand-black);
-            color: var(--brand-white);
-            text-align: center;
-            padding: 3rem 2rem;
-            font-size: 0.88rem;
-            letter-spacing: 0.3px;
-            opacity: 0.9;
-        }
-        
-        /* ═════════════════════════════════════════════════════════════
-           RESPONSIVE DESIGN — Mobile First
-           ═════════════════════════════════════════════════════════════ */
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.4rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.1rem;
-                margin-bottom: 1.8rem;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-                margin-bottom: 2.5rem;
-            }
-            
-            .section {
-                padding: 4rem 1.5rem;
-            }
-
-            .services-grid,
-            .benefits-grid,
-            .testimonials-grid {
-                gap: 1.8rem;
-            }
-
-            .contact-form {
-                padding: 2.5rem 2rem;
-            }
-
-            .about-content {
-                padding: 2.5rem 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 1.8rem;
-                letter-spacing: 0.5px;
-            }
-            
-            .hero-subtitle {
-                font-size: 0.95rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .hero-cta {
-                font-size: 0.88rem;
-                padding: 0.85rem 2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .section {
-                padding: 3rem 1.25rem;
-            }
-
-            .stat-number {
-                font-size: 1.8rem;
-            }
-
-            .stat-label {
-                font-size: 0.75rem;
-            }
-        }
-    </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
- <body class="h-full">
-  <div class="wrapper">
-   <header class="header">
-        <div class="header-content">
-         <div class="logo">
-            <img src="logo.jpg" alt="Mayra Moraes" id="logo-img" />
-            <svg viewbox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><!-- fallback monograma M geométrico --> <g transform="translate(60, 20)"><line x1="-35" y1="70" x2="-35" y2="0" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" /><line x1="-35" y1="0" x2="0" y2="35" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" /><line x1="0" y1="35" x2="35" y2="0" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" /><line x1="35" y1="0" x2="35" y2="70" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" /></g>
-             <text x="60" y="110" font-family="Montserrat, sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#FFFFFF" letter-spacing="2">MAYRA MORAES</text>
-            </svg>
-         </div>
-     <div class="hero-card">
-      <div class="hero-content">
-       <h1 class="hero-title" id="hero-title">Mayra Moraes</h1>
-       <p class="hero-subtitle" id="hero-subtitle">Consultoria Empresarial Estratégica</p>
-       <p class="hero-description" id="hero-description">Transformando desafios em oportunidades através de estratégias personalizadas e orientação especializada</p>
-       <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria empresarial" class="hero-cta" id="hero-cta">Agendar Consultoria</a>
+    :root {
+      --neutral-0: #FFFFFF; --neutral-50:#FAFAFA; --neutral-100:#F5F5F5; --neutral-200:#EEEEEE;
+      --neutral-300:#E5E5E5; --neutral-400:#D4D4D4; --neutral-500:#A3A3A3; --neutral-600:#737373;
+      --neutral-700:#525252; --neutral-800:#262626; --neutral-900:#0F0F0F;
+      --accent: #FF6B00;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--neutral-800); background: #FAFAF5; }
+    .container { width: min(1200px, 92vw); margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; border-bottom: 2px solid rgba(255,107,0,0.08); position: relative; }
+    .section::after { content: ''; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); }
+    .section { background: linear-gradient(135deg, rgba(255,239,220,0.3) 0%, rgba(255,250,240,0.3) 100%); }
+    .section-num { font-size: 12px; font-weight: 800; color: var(--accent); letter-spacing: 2px; margin-bottom: 6px; }
+    .headline { font-size: 40px; line-height: 1.2; font-weight: 800; color: var(--neutral-900); margin: 0 0 12px; }
+    .subheadline { font-size: 18px; line-height: 1.5; font-weight: 600; color: #222; opacity: 0.85; margin: 0 0 24px; }
+    .body-text { font-size: 16px; line-height: 1.7; color: var(--neutral-700); margin-bottom: 16px; }
+    .cta { display:inline-block; padding: 14px 28px; background: var(--accent); color: #fff; border: 0; border-radius: 999px; font-weight: 600; text-decoration: none; box-shadow: 0 10px 24px rgba(255,107,0,0.25); }
+    .cta:hover { background:#E35F00; }
+    .cta:active { background:#CC5400; }
+    .center { text-align:center; }
+    .muted { color: var(--neutral-600); }
+    .grid { display:grid; gap:16px; grid-template-columns: 1fr; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { border:1px solid var(--neutral-200); border-radius: var(--radius); padding: 24px; background: var(--neutral-0); }
+    .card h3 { font-size: 18px; font-weight: 800; margin: 0 0 12px; color: var(--neutral-900); }
+    .bullet { padding:10px 14px; border:1px solid var(--neutral-200); border-radius: var(--radius); color: var(--neutral-700); font-size: 15px; }
+    ul, ol { margin: 16px 0; padding-left: 24px; }
+    li { margin-bottom: 8px; line-height: 1.6; color: var(--neutral-700); }
+    footer { background: #F5F0E8; border-bottom: none; }
+    footer::after { display: none; }
+    @media (max-width: 480px) { .container { width: 94vw; padding: 0 16px; } .headline { font-size: 30px; } .subheadline { font-size: 16px; } }
+    @keyframes fadeInUp { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: translateY(0); } }
+    .fade { animation: fadeInUp .5s ease-out both; }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <!-- SEÇÃO 1: APRESENTAÇÃO (HERO) -->
+  <section class="section" aria-labelledby="hero-title">
+    <div class="container center">
+      <img src="logo.jpg" alt="Mayra Moraes" style="width:96px;height:96px;border-radius:50%;margin-bottom:18px;" class="fade">
+      <p class="section-num fade" style="animation-delay:.1s">MAYRA MORAES</p>
+      <h1 id="hero-title" class="headline fade" style="animation-delay:.1s">Assistente Social | Psicanalista em Formação</h1>
+      <p class="subheadline fade" style="animation-delay:.2s">Especialista na Implantação da NR-1 nas Empresas</p>
+      <p class="body-text fade" style="animation-delay:.25s; max-width:700px;margin-left:auto;margin-right:auto;">Cuidar da saúde mental não é um custo.<br>É uma decisão estratégica, humana e legal.</p>
+      <hr style="border:none;border-top:1px solid var(--neutral-300);margin:40px 0;opacity:0.5;">
+      <p class="headline" style="font-size:28px;margin:24px 0 8px;max-width:700px;margin-left:auto;margin-right:auto;" class="fade" style="animation-delay:.3s">Saúde mental que transforma pessoas, famílias e empresas.</p>
+      <p class="body-text fade" style="animation-delay:.35s;max-width:700px;margin-left:auto;margin-right:auto;">Ajudo pessoas afetadas por vícios comportamentais, especialmente jogos e apostas online, e empresas que precisam se adequar à NR-1, promovendo ambientes de trabalho mais saudáveis, produtivos e seguros.</p>
+      
+      <div style="margin:32px 0;text-align:left;max-width:600px;margin-left:auto;margin-right:auto;" class="fade" style="animation-delay:.4s">
+        <p style="font-weight:600;margin-bottom:12px;color:var(--neutral-900);">Minha atuação une:</p>
+        <ul style="margin:0;padding-left:24px;">
+          <li>Escuta clínica</li>
+          <li>Conhecimento técnico</li>
+          <li>Experiência prática</li>
+          <li>E profundo compromisso humano</li>
+        </ul>
       </div>
-     </div>
+      
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:24px 0;" class="fade" style="animation-delay:.45s">
+        <div class="bullet">📍 Atendimento individual</div>
+        <div class="bullet">📍 Consultoria empresarial</div>
+        <div class="bullet">📍 Projetos personalizados</div>
+      </div>
+      
+      <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em saber mais" class="cta fade" style="animation-delay:.5s">Quero saber como posso ser ajudado(a)</a>
     </div>
-   </header>
-   <main>
-    <section class="section" id="beneficios" style="background: linear-gradient(135deg, rgba(93,129,172,0.05) 0%, rgba(93,129,172,0.02) 100%);">
-     <div class="section-header">
-      <span class="section-number">01</span>
-      <h2 class="section-title" id="benefits-title">Resultados Mensuráveis</h2>
-      <div class="section-divider"></div>
-     </div>
-     <div class="benefits-grid">
-      <div class="benefit-item">
-       <div class="benefit-number">40%</div>
-       <div class="benefit-title">Redução de Absenteísmo</div>
-       <div class="benefit-desc">Empresas que implementam programas de saúde mental veem diminuição significativa nas faltas.</div>
-      </div>
-      <div class="benefit-item">
-       <div class="benefit-number">28%</div>
-       <div class="benefit-title">Aumento em Produtividade</div>
-       <div class="benefit-desc">Colaboradores mais engajados e bem-estar mental elevam performance operacional.</div>
-      </div>
-      <div class="benefit-item">
-       <div class="benefit-number">3x</div>
-       <div class="benefit-title">ROI Garantido</div>
-       <div class="benefit-desc">Cada real investido em saúde mental retorna multiplicado em resultados empresariais.</div>
-      </div>
-      <div class="benefit-item">
-       <div class="benefit-number">100%</div>
-       <div class="benefit-title">Conformidade NR1</div>
-       <div class="benefit-desc">Atendimento completo às normas regulamentadoras sem exposição a riscos legais.</div>
-      </div>
-      <div class="benefit-item">
-       <div class="benefit-number">60%</div>
-       <div class="benefit-title">Retenção de Talentos</div>
-       <div class="benefit-desc">Ambiente saudável retém profissionais qualificados e reduz turnover.</div>
-      </div>
-      <div class="benefit-item">
-       <div class="benefit-number">85%</div>
-       <div class="benefit-title">Satisfação Corporativa</div>
-       <div class="benefit-desc">Programas estruturados aumentam satisfação geral no ambiente organizacional.</div>
-      </div>
-     </div>
-    </section>
-    <section class="section" id="servicos">
-     <div class="section-header">
-      <span class="section-number">02</span>
-      <h2 class="section-title" id="services-title">Nossos Serviços</h2>
-      <div class="section-divider"></div>
-     </div>
-     <div class="services-grid">
-      <div class="service-card">
-       <div class="service-number">01</div>
-       <div class="service-icon">
-        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-        </svg>
-       </div>
-       <h3 class="service-title" id="service-1-title">Planejamento Estratégico</h3>
-       <p class="service-desc">Desenvolvemos estratégias customizadas para impulsionar o crescimento sustentável do seu negócio.</p>
-      </div>
-      <div class="service-card">
-       <div class="service-number">02</div>
-       <div class="service-icon">
-        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-       </div>
-       <h3 class="service-title" id="service-2-title">Gestão Financeira</h3>
-       <p class="service-desc">Otimizamos processos financeiros para maximizar resultados e garantir saúde econômica.</p>
-      </div>
-      <div class="service-card">
-       <div class="service-number">03</div>
-       <div class="service-icon">
-        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-       </div>
-       <h3 class="service-title" id="service-3-title">Transformação Digital</h3>
-       <p class="service-desc">Modernizamos sua empresa com tecnologias inovadoras e processos digitais eficientes.</p>
-      </div>
-     </div>
-    </section>
-    <section class="section" id="sobre" style="background: var(--brand-white);">
-     <div class="section-header">
-      <span class="section-number">03</span>
-      <h2 class="section-title" id="about-title">Sobre Mayra</h2>
-      <div class="section-divider"></div>
-     </div>
-     <div class="about-content">
-      <p>Com mais de 15 anos de experiência em consultoria empresarial, a Mayra oferece soluções personalizadas que transformam desafios em oportunidades de crescimento.</p>
-      <p style="margin-top: 1.5rem;">Nossa abordagem combina análise estratégica profunda, metodologias comprovadas e um compromisso genuíno com o sucesso de cada cliente.</p>
-      <p style="margin-top: 1.5rem;">Trabalhamos lado a lado com empresários e executivos para criar estratégias que geram resultados mensuráveis e duradouros.</p>
-     </div>
-    </section>
-    <section class="section" id="depoimentos">
-     <div class="section-header">
-      <span class="section-number">04</span>
-      <h2 class="section-title" id="testimonials-title">O que Dizem Nossos Clientes</h2>
-      <div class="section-divider"></div>
-     </div>
-     <div class="testimonials-grid">
-      <div class="testimonial-card">
-       <p class="testimonial-text">"A Mayra transformou completamente a cultura de saúde mental na nossa empresa. Os resultados apareceram em 3 meses. Recomendo para qualquer gestora sria."</p>
-       <div class="testimonial-author">
-        <div class="author-avatar">CZ</div>
-        <div class="author-info">
-         <h4>Carlos Zambra</h4>
-         <p>CEO, TechSolutions Brasil</p>
-        </div>
-       </div>
-      </div>
-      <div class="testimonial-card">
-       <p class="testimonial-text">"Profissionalismo, expertise e resultados reais. Mayra entende os desafios de empresas em crescimento e oferece soluções que funciona."</p>
-       <div class="testimonial-author">
-        <div class="author-avatar">AK</div>
-        <div class="author-info">
-         <h4>Amanda Kaufmann</h4>
-         <p>Diretora de RH, Inovação Industrial</p>
-        </div>
-       </div>
-      </div>
-      <div class="testimonial-card">
-       <p class="testimonial-text">"Consultoria NR1 não é luxo, é necessidade. Mayra ajudou nossa empresa a não apenas cumprir regulações mas criar impacto real."</p>
-       <div class="testimonial-author">
-        <div class="author-avatar">MC</div>
-        <div class="author-info">
-         <h4>Marco Cortez</h4>
-         <p>Gerente de Compliance, Construtura Magna</p>
-        </div>
-       </div>
-      </div>
-     </div>
-    </section>
-    <section class="section" id="contato">
-     <div class="section-header">
-      <span class="section-number">05</span>
-      <h2 class="section-title" id="contact-title">Entre em Contato</h2>
-      <div class="section-divider"></div>
-     </div>
-     <form class="contact-form" id="contact-form">
-      <div class="form-group"><label for="name">Nome</label> <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group"><label for="email">E-mail</label> <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group"><label for="phone">Telefone</label> <input type="tel" id="phone" name="phone" required>
-      </div>
-      <div class="form-group"><label for="message">Mensagem</label> <textarea id="message" name="message" required></textarea>
-      </div><button type="submit" class="submit-btn" id="submit-btn">Enviar Mensagem</button>
-      <div class="success-message" id="success-message">
-       Mensagem enviada com sucesso! Entraremos em contato em breve.
-      </div>
-     </form>
-    </section>
-    <section class="section" id="faq" style="background: linear-gradient(135deg, rgba(93,129,172,0.05) 0%, rgba(93,129,172,0.02) 100%);">
-     <div class="section-header">
-      <span class="section-number">06</span>
-      <h2 class="section-title" id="faq-title">Perguntas Frequentes</h2>
-      <div class="section-divider"></div>
-     </div>
-     <div class="faq-container">
-      <div class="faq-item">
-       <div class="faq-question">O que é NR1 exatamente?</div>
-       <div class="faq-answer">
-        <p>A Norma Regulamentadora 1 é o fundamento do sistema de segurança e saúde no trabalho. Estabelece diretrizes para programas de proteção da saúde mental e bem-estar ocupacional nas empresas. É requisito legal para todas as organizações brasileiras.</p>
-       </div>
-      </div>
-      <div class="faq-item">
-       <div class="faq-question">Quanto tempo até ver resultados?</div>
-       <div class="faq-answer">
-        <p>Resultados iniciais aparecem entre 30-60 dias. Transformações estruturais ocorrem em 3-6 meses. Consolidação e sustentabilidade entre 6-12 meses. Oferecemos acompanhamento contínuo durante todo o processo.</p>
-       </div>
-      </div>
-      <div class="faq-item">
-       <div class="faq-question">Qual é a faixa de investimento?</div>
-       <div class="faq-answer">
-        <p>Os valores variam conforme tamanho da empresa, complexidade dos desafios e escopo do programa. Oferecemos consultoria diagnóstica gratuita para empresas interessadas, com proposta personalizada sem comprometimento.</p>
-       </div>
-      </div>
-      <div class="faq-item">
-       <div class="faq-question">Serve para empresas pequenas e startups?</div>
-       <div class="faq-answer">
-        <p>Absolutamente. Adaptamos soluções para micro, pequenas, médias e grandes empresas. Inclusive oferecemos programas escaláveis especialmente desenhados para startups em crescimento.</p>
-       </div>
-      </div>
-      <div class="faq-item">
-       <div class="faq-question">Vocês oferecem suporte contínuo?</div>
-       <div class="faq-answer">
-        <p>Sim. Oferecemos pacotes de acompanhamento mensal, trimestral ou anual. Mantemos relacionamento estratégico com nossos clientes para evolução contínua dos programas.</p>
-       </div>
-      </div>
-      <div class="faq-item">
-       <div class="faq-question">Como é o processo de implementação?</div>
-       <div class="faq-answer">
-        <p>Seguimos 5 fases: (1) Diagnóstico profundo, (2) Design do programa, (3) Implementação com treinamento, (4) Acompanhamento, (5) Otimização. Cada fase é estruturada para máximo impacto.</p>
-       </div>
-      </div>
-     </div>
-    </section>
-   </main>
-   <footer class="footer">
-    <p>© 2024 Mayra Consultoria Empresarial. Todos os direitos reservados.</p>
-   </footer>
-  </div>
-  <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria" class="whatsapp-btn" title="Fale conosco pelo WhatsApp">
-   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.968 1.495c-1.533.867-2.582 2.098-2.582 3.769 0 1.671 1.049 3.19 2.582 4.057 1.533.867 3.708 1.495 4.968 1.495 1.259 0 3.435-.628 4.968-1.495 1.533-.867 2.582-2.386 2.582-4.057 0-1.671-1.049-2.902-2.582-3.769a9.87 9.87 0 00-4.968-1.495M2.982 21c1.884-1.033 4.158-1.594 6.5-1.594s4.616.561 6.5 1.594c1.884 1.033 3.354 2.483 4.333 4.17-1.883 1.032-4.157 1.593-6.5 1.593s-4.616-.561-6.5-1.594c-1.883-1.032-3.353-2.482-4.333-4.169z"/>
-   </svg>
-  </a>
-  <script>
-        const defaultConfig = {
-            hero_title: "Mayra",
-            hero_subtitle: "Consultoria Empresarial Estratégica",
-            hero_button_text: "Agende sua Consultoria",
-            services_title: "Nossos Serviços",
-            service_1_title: "Planejamento Estratégico",
-            service_2_title: "Gestão Financeira",
-            service_3_title: "Transformação Digital",
-            about_title: "Sobre Mayra",
-            contact_title: "Entre em Contato",
-            contact_button_text: "Enviar Mensagem",
-            background_color: "#F1ECE1",
-            primary_color: "#5D81AC",
-            text_color: "#000000",
-            surface_color: "#FFFFFF",
-            accent_color: "#4a6b8f",
-            font_family: "Montserrat",
-            font_size: 16
-        };
-        
-        async function onConfigChange(config) {
-            const baseSize = config.font_size || defaultConfig.font_size;
-            const customFont = config.font_family || defaultConfig.font_family;
-            const baseFontStack = 'Arial, sans-serif';
-            const titleFont = 'Cormorant Garamond, serif';
-            
-            // Aplicar cores
-            document.documentElement.style.setProperty('--brand-beige', config.background_color || defaultConfig.background_color);
-            document.documentElement.style.setProperty('--brand-blue', config.primary_color || defaultConfig.primary_color);
-            document.documentElement.style.setProperty('--brand-black', config.text_color || defaultConfig.text_color);
-            document.documentElement.style.setProperty('--brand-white', config.surface_color || defaultConfig.surface_color);
-            
-            // Aplicar fontes e tamanhos
-            document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
-            document.body.style.fontSize = `${baseSize}px`;
-            
-            // Títulos principais
-            const heroTitle = document.getElementById('hero-title');
-            if (heroTitle) {
-                heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
-                heroTitle.style.fontFamily = `${titleFont}`;
-                heroTitle.style.fontSize = `${baseSize * 2.5}px`;
-            }
-            
-            const heroSubtitle = document.getElementById('hero-subtitle');
-            if (heroSubtitle) {
-                heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
-                heroSubtitle.style.fontSize = `${baseSize * 1.25}px`;
-            }
-            
-            const heroCta = document.getElementById('hero-cta');
-            if (heroCta) {
-                heroCta.textContent = config.hero_button_text || defaultConfig.hero_button_text;
-                heroCta.style.fontSize = `${baseSize * 1.05}px`;
-            }
-            
-            // Seções
-            const servicesTitle = document.getElementById('services-title');
-            if (servicesTitle) {
-                servicesTitle.textContent = config.services_title || defaultConfig.services_title;
-                servicesTitle.style.fontFamily = `${titleFont}`;
-                servicesTitle.style.fontSize = `${baseSize * 1.875}px`;
-            }
-            
-            const service1Title = document.getElementById('service-1-title');
-            if (service1Title) {
-                service1Title.textContent = config.service_1_title || defaultConfig.service_1_title;
-                service1Title.style.fontSize = `${baseSize * 1.5}px`;
-            }
-            
-            const service2Title = document.getElementById('service-2-title');
-            if (service2Title) {
-                service2Title.textContent = config.service_2_title || defaultConfig.service_2_title;
-                service2Title.style.fontSize = `${baseSize * 1.5}px`;
-            }
-            
-            const service3Title = document.getElementById('service-3-title');
-            if (service3Title) {
-                service3Title.textContent = config.service_3_title || defaultConfig.service_3_title;
-                service3Title.style.fontSize = `${baseSize * 1.5}px`;
-            }
-            
-            const aboutTitle = document.getElementById('about-title');
-            if (aboutTitle) {
-                aboutTitle.textContent = config.about_title || defaultConfig.about_title;
-                aboutTitle.style.fontFamily = `${titleFont}`;
-                aboutTitle.style.fontSize = `${baseSize * 1.875}px`;
-            }
-            
-            const contactTitle = document.getElementById('contact-title');
-            if (contactTitle) {
-                contactTitle.textContent = config.contact_title || defaultConfig.contact_title;
-                contactTitle.style.fontFamily = `${titleFont}`;
-                contactTitle.style.fontSize = `${baseSize * 1.875}px`;
-            }
-            
-            const submitBtn = document.getElementById('submit-btn');
-            if (submitBtn) {
-                submitBtn.textContent = config.contact_button_text || defaultConfig.contact_button_text;
-                submitBtn.style.fontSize = `${baseSize * 1.05}px`;
-            }
-        }
-        
-        // Formulário de contato
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const successMessage = document.getElementById('success-message');
-            successMessage.style.display = 'block';
-            
-            setTimeout(() => {
-                this.reset();
-                successMessage.style.display = 'none';
-            }, 4000);
-        });
+  </section>
 
-        // FAQ interativo
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const faqItem = this.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
+  <!-- SEÇÃO 2: QUEM SOU EU -->
+  <section class="section" aria-labelledby="quem-sou-title">
+    <div class="container center">
+      <h2 id="quem-sou-title" class="headline fade" style="animation-delay:.1s">Minha história não é apenas profissional.<br>É pessoal.</h2>
+      <div style="max-width:900px;margin:32px auto 0;" class="fade" style="animation-delay:.2s">
+        <p class="body-text">Sou Assistente Social, psicanalista em formação e especialista na implantação da NR-1 – Saúde Mental nas Empresas.</p>
+        <p class="body-text">Minha atuação nasceu da dor, da vivência real e da observação profunda de como o sofrimento psíquico silencioso destrói vidas, famílias e carreiras — especialmente quando envolve vícios em jogos e apostas online.</p>
+        <p class="body-text">Após acompanhar de perto pessoas muito próximas afetadas por esse vício, desenvolvi métodos próprios de orientação, acolhimento e reestruturação emocional, que hoje ajudam indivíduos e organizações a retomarem o controle, a dignidade e o equilíbrio.</p>
         
-        // Inicializar SDK (apenas se disponível - não funciona em deploy estático)
-        if (typeof window.elementSdk !== 'undefined' && window.elementSdk) {
-            window.elementSdk.init({
-                defaultConfig,
-                onConfigChange,
-                mapToCapabilities: (config) => ({
-                    recolorables: [
-                        {
-                            get: () => config.background_color || defaultConfig.background_color,
-                            set: (value) => {
-                                config.background_color = value;
-                                window.elementSdk.setConfig({ background_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.surface_color || defaultConfig.surface_color,
-                            set: (value) => {
-                                config.surface_color = value;
-                                window.elementSdk.setConfig({ surface_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.text_color || defaultConfig.text_color,
-                            set: (value) => {
-                                config.text_color = value;
-                                window.elementSdk.setConfig({ text_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.primary_color || defaultConfig.primary_color,
-                            set: (value) => {
-                                config.primary_color = value;
-                                window.elementSdk.setConfig({ primary_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.accent_color || defaultConfig.accent_color,
-                            set: (value) => {
-                                config.accent_color = value;
-                                window.elementSdk.setConfig({ accent_color: value });
-                            }
-                        }
-                    ],
-                    borderables: [],
-                    fontEditable: {
-                        get: () => config.font_family || defaultConfig.font_family,
-                        set: (value) => {
-                            config.font_family = value;
-                            window.elementSdk.setConfig({ font_family: value });
-                        }
-                    },
-                    fontSizeable: {
-                        get: () => config.font_size || defaultConfig.font_size,
-                        set: (value) => {
-                            config.font_size = value;
-                            window.elementSdk.setConfig({ font_size: value });
-                        }
-                    }
-                }),
-                mapToEditPanelValues: (config) => new Map([
-                    ["hero_title", config.hero_title || defaultConfig.hero_title],
-                    ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
-                    ["hero_button_text", config.hero_button_text || defaultConfig.hero_button_text],
-                    ["services_title", config.services_title || defaultConfig.services_title],
-                    ["service_1_title", config.service_1_title || defaultConfig.service_1_title],
-                    ["service_2_title", config.service_2_title || defaultConfig.service_2_title],
-                    ["service_3_title", config.service_3_title || defaultConfig.service_3_title],
-                    ["about_title", config.about_title || defaultConfig.about_title],
-                    ["contact_title", config.contact_title || defaultConfig.contact_title],
-                    ["contact_button_text", config.contact_button_text || defaultConfig.contact_button_text]
-                ])
-            });
-            }
-        </script>
-        <script>
-        (function(){
-            const logoImg = document.querySelector('.logo img');
-            const svg = document.querySelector('.logo svg');
-            if(!logoImg) return;
-            logoImg.addEventListener('error', ()=>{ logoImg.style.display = 'none'; if(svg) svg.style.display = 'block'; });
-            logoImg.addEventListener('load', ()=>{ if(svg) svg.style.display = 'none'; logoImg.style.display = 'block'; });
-            setTimeout(()=>{ if(logoImg.complete && logoImg.naturalWidth === 0){ logoImg.dispatchEvent(new Event('error')); } }, 300);
-        })();
-        </script>
+        <div class="card" style="margin-top:24px;border-left:4px solid var(--accent);">
+          <p style="margin:0;font-style:italic;color:var(--neutral-800);">💬 Aqui, você não encontra julgamentos.<br>Você encontra escuta, direção e cuidado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: PARA QUEM É MEU TRABALHO -->
+  <section class="section" aria-labelledby="publico-title">
+    <div class="container">
+      <h2 id="publico-title" class="headline fade" style="animation-delay:.1s">Para quem é meu trabalho</h2>
+      <p class="subheadline fade" style="animation-delay:.2s">Atendo três frentes principais:</p>
+      
+      <div class="grid fade" style="animation-delay:.25s">
+        <article class="card">
+          <h3>🔹 Pessoas e Famílias</h3>
+          <ul style="margin-top:12px;">
+            <li>Pessoas envolvidas com jogos e apostas online</li>
+            <li>Familiares emocionalmente adoecidos</li>
+            <li>Indivíduos em sofrimento psíquico silencioso</li>
+          </ul>
+        </article>
+        
+        <article class="card">
+          <h3>🔹 Empresas e Instituições</h3>
+          <ul style="margin-top:12px;">
+            <li>Empresas que precisam se adequar à NR-1</li>
+            <li>RHs e lideranças que desejam prevenir adoecimento mental</li>
+            <li>Organizações preocupadas com riscos psicossociais</li>
+          </ul>
+        </article>
+        
+        <article class="card">
+          <h3>🔹 Profissionais da Saúde</h3>
+          <ul style="margin-top:12px;">
+            <li>Capacitação e orientação técnica</li>
+            <li>Materiais educativos e e-books especializados</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4: SERVIÇOS -->
+  <section class="section" aria-labelledby="servicos-title">
+    <div class="container">
+      <h2 id="servicos-title" class="headline fade" style="animation-delay:.1s">Serviços</h2>
+      
+      <div style="max-width:900px;margin:32px auto;" class="fade" style="animation-delay:.2s">
+        <article class="card" style="margin-bottom:24px;">
+          <h3>🧠 Atendimento Individual e Orientação Psicossocial</h3>
+          <ul>
+            <li>Escuta qualificada</li>
+            <li>Orientação emocional e comportamental</li>
+            <li>Acompanhamento estruturado para dependência em jogos/apostas</li>
+          </ul>
+        </article>
+        
+        <article class="card" style="margin-bottom:24px;">
+          <h3>🎯 Mentoria e Orientação para Famílias</h3>
+          <ul>
+            <li>Apoio emocional</li>
+            <li>Estratégias práticas de convivência</li>
+            <li>Redução de conflitos, culpa e exaustão emocional</li>
+          </ul>
+        </article>
+        
+        <article class="card" style="margin-bottom:24px;">
+          <h3>🏢 Consultoria Empresarial – Implantação da NR-1</h3>
+          <ul>
+            <li>Diagnóstico de riscos psicossociais</li>
+            <li>Apoio na adequação às exigências legais</li>
+            <li>Estratégias de prevenção ao adoecimento mental</li>
+            <li>Ações educativas e sensibilização de equipes</li>
+          </ul>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--neutral-200);">
+            <p style="font-weight:600;margin:0 0 8px;color:var(--neutral-900);">Benefícios:</p>
+            <p style="margin:4px 0;">✔ Redução de afastamentos</p>
+            <p style="margin:4px 0;">✔ Prevenção de passivos trabalhistas</p>
+            <p style="margin:4px 0;">✔ Melhoria do clima organizacional</p>
+          </div>
+        </article>
+        
+        <article class="card">
+          <h3>📘 Produção de Conteúdo e Capacitação</h3>
+          <ul>
+            <li>E-books educativos</li>
+            <li>Materiais técnicos para profissionais</li>
+            <li>Palestras e ações de conscientização</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 5: RESULTADOS E IMPACTOS -->
+  <section class="section" aria-labelledby="resultados-title">
+    <div class="container center">
+      <h2 id="resultados-title" class="headline fade" style="animation-delay:.1s">Resultados e Impactos</h2>
+      <p class="subheadline fade" style="animation-delay:.2s">O que meu trabalho promove:</p>
+      
+      <div style="max-width:700px;margin:32px auto;" class="fade" style="animation-delay:.25s">
+        <div class="bullet" style="margin-bottom:12px;">✔ Pessoas que retomam o controle da própria vida</div>
+        <div class="bullet" style="margin-bottom:12px;">✔ Famílias que aprendem a lidar sem adoecer juntas</div>
+        <div class="bullet" style="margin-bottom:12px;">✔ Empresas mais humanas, produtivas e seguras</div>
+        <div class="bullet" style="margin-bottom:12px;">✔ Redução de riscos legais e psicossociais</div>
+        <div class="bullet" style="margin-bottom:12px;">✔ Ambientes onde falar de saúde mental deixa de ser tabu</div>
+        
+        <div class="card" style="margin-top:24px;border-left:4px solid var(--accent);">
+          <p style="margin:0;font-weight:600;color:var(--neutral-900);">💡 Resultados não são apenas números.<br>São vidas reorganizadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 6: AUTORIDADE E CONHECIMENTO -->
+  <section class="section" aria-labelledby="ebooks-title">
+    <div class="container">
+      <h2 id="ebooks-title" class="headline fade" style="animation-delay:.1s">Autoridade e Conhecimento</h2>
+      <p class="subheadline fade" style="animation-delay:.2s">Sou autora de dois e-books:</p>
+      
+      <div class="grid fade" style="animation-delay:.25s">
+        <article class="card">
+          <h3 style="font-size:20px;color:var(--accent);">📕 Projeto Game Over</h3>
+          <p class="body-text" style="margin:12px 0;">Para pessoas e famílias afetadas por jogos e apostas online</p>
+          <p class="muted" style="font-size:14px;margin-top:12px;">Orientação prática, redução de culpa e reorganização.</p>
+        </article>
+        
+        <article class="card">
+          <h3 style="font-size:20px;color:var(--accent);">📘 Ludomania em Foco</h3>
+          <p class="body-text" style="margin:12px 0;">Capacitação técnica para profissionais da saúde mental</p>
+          <p class="muted" style="font-size:14px;margin-top:12px;">Conceitos, diagnóstico e protocolo de atendimento.</p>
+        </article>
+      </div>
+      
+      <div style="max-width:700px;margin:32px auto 0;" class="fade" style="animation-delay:.3s">
+        <p class="body-text" style="font-weight:600;margin-bottom:12px;">Ambos desenvolvidos com base em:</p>
+        <ul style="margin:0;padding-left:24px;">
+          <li>Experiência prática</li>
+          <li>Estudos clínicos</li>
+          <li>Linguagem acessível e humana</li>
+        </ul>
+        <div style="text-align:center;margin-top:24px;">
+          <a href="https://wa.me/5514997439364?text=Quero conhecer os e-books" class="cta fade" style="animation-delay:.35s">Conheça os e-books</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 7: POSICIONAMENTO -->
+  <section class="section center" aria-labelledby="posicionamento-title">
+    <div class="container center">
+      <h2 id="posicionamento-title" class="headline fade" style="animation-delay:.1s;max-width:700px;margin-left:auto;margin-right:auto;font-size:32px;">
+        "Saúde mental não é fraqueza.<br>É responsabilidade individual, social e empresarial."
+      </h2>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 8: CTA FINAL -->
+  <section class="section center" aria-labelledby="cta-final-title">
+    <div class="container">
+      <h2 id="cta-final-title" class="headline fade" style="animation-delay:.1s">Você não precisa enfrentar isso sozinho(a).</h2>
+      <p class="body-text fade" style="animation-delay:.2s;max-width:700px;margin-left:auto;margin-right:auto;">Seja para cuidar da sua saúde mental, ajudar alguém que você ama, ou adequar sua empresa à NR-1, existe um caminho possível, ético e humano.</p>
+      
+      <div style="margin:32px 0;" class="fade" style="animation-delay:.25s">
+        <p style="font-size:16px;margin:8px 0;color:var(--neutral-700);">📲 Entre em contato agora</p>
+        <p style="font-size:16px;margin:8px 0;color:var(--neutral-700);">📩 Atendimento humanizado e sigiloso</p>
+      </div>
+      
+      <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria" class="cta fade" style="animation-delay:.3s">Falar com Mayra Moraes</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section" role="contentinfo">
+    <div class="container center">
+      <p class="muted" style="font-size:14px;margin-bottom:12px;">Este site não substitui acompanhamento médico/psicológico. Em casos de emergência, procure atendimento imediato.</p>
+      <p class="muted">© 2026 Mayra Moraes. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mayra Moraes",
+    "jobTitle": "Assistente Social | Psicanalista em Formação",
+    "description": "Especialista em saúde mental, NR-1 e vícios em jogos online.",
+    "url": "",
+    "sameAs": []
+  }
+  </script>
 </body>
 </html>
