@@ -3,131 +3,278 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mayra Moraes — Saúde Mental com Seriedade [OPÇÃO 5: ACOLHEDOR]</title>
+  <title>Mayra Moraes — Saúde Mental com Seriedade</title>
   <meta name="description" content="Assistente Social especializada em NR-1, vícios em jogos/apostas online e saúde mental empresarial.">
   <meta property="og:title" content="Mayra Moraes — Saúde Mental com Seriedade" />
   <meta property="og:description" content="Atendimento individual, consultoria NR-1 e mentoria para famílias." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --neutral-0: #FFFFFF; --neutral-50:#FAFAFA; --neutral-100:#F5F5F5; --neutral-200:#EEEEEE;
-      --neutral-300:#E5E5E5; --neutral-400:#D4D4D4; --neutral-500:#A3A3A3; --neutral-600:#737373;
-      --neutral-700:#525252; --neutral-800:#262626; --neutral-900:#0F0F0F;
-      --accent: #FF6B00;
-      --radius: 12px;
+      --primary: #2C3E50;
+      --accent: #D35400;
+      --neutral-0: #FFFFFF;
+      --neutral-50: #FAF9F6;
+      --neutral-100: #F3F4F6;
+      --neutral-200: #E5E7EB;
+      --neutral-600: #4B5563;
+      --neutral-800: #1F2937;
+      --radius: 16px;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     }
+
     * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body { margin: 0; font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--neutral-800); background: #FAFAF5; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--neutral-800);
+      background: var(--neutral-50);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--primary); margin-top: 0; }
+
     .container { width: min(1200px, 92vw); margin: 0 auto; padding: 0 24px; }
-    .section { padding: 80px 0; border-bottom: 2px solid rgba(255,107,0,0.08); position: relative; }
-    .section::after { content: ''; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); }
-    .section { background: linear-gradient(135deg, rgba(255,239,220,0.3) 0%, rgba(255,250,240,0.3) 100%); }
-    .section-num { font-size: 12px; font-weight: 800; color: var(--accent); letter-spacing: 2px; margin-bottom: 6px; }
-    .headline { font-size: 40px; line-height: 1.2; font-weight: 800; color: var(--neutral-900); margin: 0 0 12px; }
-    .subheadline { font-size: 18px; line-height: 1.5; font-weight: 600; color: #222; opacity: 0.85; margin: 0 0 24px; }
-    .body-text { font-size: 16px; line-height: 1.7; color: var(--neutral-700); margin-bottom: 16px; }
-    .cta { display:inline-block; padding: 14px 28px; background: var(--accent); color: #fff; border: 0; border-radius: 999px; font-weight: 600; text-decoration: none; box-shadow: 0 10px 24px rgba(255,107,0,0.25); }
-    .cta:hover { background:#E35F00; }
-    .cta:active { background:#CC5400; }
-    .center { text-align:center; }
+
+    /* Header */
+    #main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 16px 0;
+      transition: all 0.3s ease;
+    }
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--font-heading); font-weight: 800; font-size: 24px; color: var(--accent); letter-spacing: -0.5px; }
+    nav { display: flex; gap: 24px; align-items: center; }
+    nav a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 15px; transition: color 0.2s; }
+    nav a:hover { color: var(--accent); }
+    .nav-cta {
+      padding: 10px 20px;
+      background: var(--accent);
+      color: white !important;
+      border-radius: 99px;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #E67E22; }
+
+    /* Sections */
+    .section { padding: 100px 0; position: relative; overflow: hidden; }
+
+    /* Hero */
+    #hero {
+      background: linear-gradient(135deg, rgba(255,247,235,0.6) 0%, rgba(255,255,255,0.8) 100%);
+      padding-top: 140px; /* Account for header */
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .hero-grid { grid-template-columns: 1.2fr 0.8fr; }
+      .hero-image-wrapper { order: 2; }
+    }
+
+    .headline { font-size: clamp(32px, 5vw, 48px); line-height: 1.15; font-weight: 700; color: var(--primary); margin-bottom: 24px; }
+    .subheadline { font-size: 20px; font-weight: 500; color: var(--neutral-600); margin-bottom: 32px; }
+    .body-text { font-size: 18px; color: var(--neutral-600); margin-bottom: 24px; }
+
+    .cta {
+      display: inline-block;
+      padding: 16px 32px;
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      border-radius: 99px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(211, 84, 0, 0.25);
+      transition: all 0.3s ease;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 24px rgba(211, 84, 0, 0.3); background: #BF4B00; }
+
+    /* Cards */
+    .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .card {
+      background: var(--neutral-0);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--neutral-100);
+      transition: all 0.4s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(211, 84, 0, 0.1);
+    }
+    .card h3 { font-size: 22px; margin-bottom: 16px; }
+
+    /* Icons */
+    .icon-box {
+      width: 48px; height: 48px;
+      background: rgba(211, 84, 0, 0.1);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    /* Lists */
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { position: relative; padding-left: 28px; margin-bottom: 12px; color: var(--neutral-600); }
+    li::before {
+      content: '✔';
+      position: absolute; left: 0; top: 0;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* Footer */
+    footer { background: var(--primary); color: white; padding: 60px 0; text-align: center; }
+    footer p { opacity: 0.8; font-size: 14px; }
+
+    /* Utilities */
+    .center { text-align: center; }
     .muted { color: var(--neutral-600); }
-    .grid { display:grid; gap:16px; grid-template-columns: 1fr; }
-    @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
-    .card { border:1px solid var(--neutral-200); border-radius: var(--radius); padding: 24px; background: var(--neutral-0); }
-    .card h3 { font-size: 18px; font-weight: 800; margin: 0 0 12px; color: var(--neutral-900); }
-    .bullet { padding:10px 14px; border:1px solid var(--neutral-200); border-radius: var(--radius); color: var(--neutral-700); font-size: 15px; }
-    ul, ol { margin: 16px 0; padding-left: 24px; }
-    li { margin-bottom: 8px; line-height: 1.6; color: var(--neutral-700); }
-    footer { background: #F5F0E8; border-bottom: none; }
-    footer::after { display: none; }
-    @media (max-width: 480px) { .container { width: 94vw; padding: 0 16px; } .headline { font-size: 30px; } .subheadline { font-size: 16px; } }
-    @keyframes fadeInUp { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: translateY(0); } }
-    .fade { animation: fadeInUp .5s ease-out both; }
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .highlight { color: var(--accent); }
+
+    /* Animation classes */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { display: none; } /* Simplified for mobile for now, or just hide nav links */
+      .headline { font-size: 36px; }
+    }
   </style>
 </head>
 <body>
-  <!-- SEÇÃO 1: APRESENTAÇÃO (HERO) -->
-  <section class="section" aria-labelledby="hero-title">
-    <div class="container center">
-      <img src="logo.jpg" alt="Mayra Moraes" style="width:140px;height:140px;border-radius:50%;margin-bottom:24px;" class="fade">
-      <h1 id="hero-title" class="headline fade" style="animation-delay:.1s">Especialista na Implantação da NR-1 nas Empresas</h1>
-      <p class="subheadline fade" style="animation-delay:.15s">Assistente Social | Psicanalista em Formação</p>
-      <p class="body-text fade" style="animation-delay:.2s; max-width:700px;margin-left:auto;margin-right:auto;">Cuidar da saúde mental não é um custo.<br>É uma decisão estratégica, humana e legal.</p>
-      <hr style="border:none;border-top:1px solid var(--neutral-300);margin:40px 0;opacity:0.5;">
-      <p class="headline" style="font-size:28px;margin:24px 0 8px;max-width:700px;margin-left:auto;margin-right:auto;" class="fade" style="animation-delay:.25s">Saúde mental que transforma pessoas, famílias e empresas.</p>
-      <p class="body-text fade" style="animation-delay:.3s;max-width:700px;margin-left:auto;margin-right:auto;">Ajudo pessoas afetadas por vícios comportamentais, especialmente jogos e apostas online, e empresas que precisam se adequar à NR-1, promovendo ambientes de trabalho mais saudáveis, produtivos e seguros.</p>
-      
-      <div style="margin:32px 0;text-align:left;max-width:600px;margin-left:auto;margin-right:auto;" class="fade" style="animation-delay:.35s">
-        <p style="font-weight:600;margin-bottom:12px;color:var(--neutral-900);">Minha atuação une:</p>
-        <ul style="margin:0;padding-left:24px;">
-          <li>Escuta clínica</li>
-          <li>Conhecimento técnico</li>
-          <li>Experiência prática</li>
-          <li>E profundo compromisso humano</li>
-        </ul>
-      </div>
-      
-      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:24px 0;" class="fade" style="animation-delay:.4s">
-        <div class="bullet">📍 Atendimento individual</div>
-        <div class="bullet">📍 Consultoria empresarial</div>
-        <div class="bullet">📍 Projetos personalizados</div>
-      </div>
-      
-      <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em saber mais" class="cta fade" style="animation-delay:.45s">Quero saber como posso ser ajudado(a)</a>
-    </div>
-  </section>
 
-  <!-- SEÇÃO 2: QUEM SOU EU -->
-  <section class="section" aria-labelledby="quem-sou-title">
-    <div class="container center">
-      <h2 id="quem-sou-title" class="headline fade" style="animation-delay:.1s">Minha história não é apenas profissional.<br>É pessoal.</h2>
-      <div style="max-width:900px;margin:32px auto 0;" class="fade" style="animation-delay:.2s">
-        <p class="body-text">Sou Assistente Social, psicanalista em formação e especialista na implantação da NR-1 – Saúde Mental nas Empresas.</p>
-        <p class="body-text">Minha atuação nasceu da dor, da vivência real e da observação profunda de como o sofrimento psíquico silencioso destrói vidas, famílias e carreiras — especialmente quando envolve vícios em jogos e apostas online.</p>
-        <p class="body-text">Após acompanhar de perto pessoas muito próximas afetadas por esse vício, desenvolvi métodos próprios de orientação, acolhimento e reestruturação emocional, que hoje ajudam indivíduos e organizações a retomarem o controle, a dignidade e o equilíbrio.</p>
-        
-        <div class="card" style="margin-top:24px;border-left:4px solid var(--accent);">
-          <p style="margin:0;font-style:italic;color:var(--neutral-800);">💬 Aqui, você não encontra julgamentos.<br>Você encontra escuta, direção e cuidado.</p>
+  <header id="main-header">
+    <div class="container header-content">
+      <div class="logo">Mayra Moraes</div>
+      <nav>
+        <a href="#hero">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato" class="nav-cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEÇÃO 1: HERO -->
+  <section id="hero" class="section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <p class="section-num" style="color:var(--accent); font-weight:800; letter-spacing:2px; font-size:12px; margin-bottom:16px;">NR-1 & SAÚDE MENTAL</p>
+          <h1 class="headline">Especialista na Implantação da NR-1 nas Empresas</h1>
+          <p class="subheadline">Assistente Social | Psicanalista em Formação</p>
+          <p class="body-text">Cuidar da saúde mental não é um custo. É uma decisão estratégica, humana e legal.</p>
+
+          <div style="margin: 32px 0;">
+            <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em saber mais" class="cta">Quero saber mais</a>
+          </div>
+
+          <div style="display:flex; gap:16px; flex-wrap:wrap; font-size:14px; font-weight:600; color:var(--neutral-600);">
+            <span>📍 Atendimento individual</span>
+            <span>📍 Consultoria empresarial</span>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper center reveal">
+           <img src="logo.jpg" alt="Mayra Moraes" style="width:280px; height:280px; object-fit:cover; border-radius:50%; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 8px solid white;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO 3: PARA QUEM É MEU TRABALHO -->
-  <section class="section" aria-labelledby="publico-title">
+  <!-- SEÇÃO 2: QUEM SOU EU -->
+  <section id="sobre" class="section" style="background: white;">
     <div class="container">
-      <h2 id="publico-title" class="headline fade" style="animation-delay:.1s">Para quem é meu trabalho</h2>
-      <p class="subheadline fade" style="animation-delay:.2s">Atendo três frentes principais:</p>
+      <div class="grid" style="align-items:center;">
+        <div class="reveal">
+          <h2 class="headline" style="font-size:36px;">Minha história não é apenas profissional. É pessoal.</h2>
+          <div style="width: 60px; height: 4px; background: var(--accent); margin-bottom: 32px;"></div>
+        </div>
+        <div class="reveal">
+          <p class="body-text">Sou Assistente Social, psicanalista em formação e especialista na implantação da NR-1 – Saúde Mental nas Empresas.</p>
+          <p class="body-text">Minha atuação nasceu da dor, da vivência real e da observação profunda de como o sofrimento psíquico silencioso destrói vidas, famílias e carreiras — especialmente quando envolve vícios em jogos e apostas online.</p>
+
+          <div style="margin-top:24px; padding: 24px; background: rgba(211, 84, 0, 0.05); border-left: 4px solid var(--accent); border-radius: 8px;">
+            <p style="margin:0; font-style:italic; font-weight: 500; color: var(--primary);">“Aqui, você não encontra julgamentos. Você encontra escuta, direção e cuidado.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: PÚBLICO ALVO -->
+  <section id="publico" class="section">
+    <div class="container">
+      <div class="center reveal" style="margin-bottom: 60px;">
+        <h2 class="headline">Para quem é meu trabalho</h2>
+        <p class="subheadline">Atendo três frentes principais de atuação</p>
+      </div>
       
-      <div class="grid fade" style="animation-delay:.25s">
-        <article class="card">
-          <h3>🔹 Pessoas e Famílias</h3>
-          <ul style="margin-top:12px;">
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card reveal">
+          <div class="icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>Pessoas e Famílias</h3>
+          <ul>
             <li>Pessoas envolvidas com jogos e apostas online</li>
             <li>Familiares emocionalmente adoecidos</li>
             <li>Indivíduos em sofrimento psíquico silencioso</li>
           </ul>
         </article>
         
-        <article class="card">
-          <h3>🔹 Empresas e Instituições</h3>
-          <ul style="margin-top:12px;">
+        <!-- Card 2 -->
+        <article class="card reveal" style="transition-delay: 0.1s;">
+          <div class="icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <h3>Empresas e Instituições</h3>
+          <ul>
             <li>Empresas que precisam se adequar à NR-1</li>
-            <li>RHs e lideranças que desejam prevenir adoecimento mental</li>
-            <li>Organizações preocupadas com riscos psicossociais</li>
+            <li>RHs e lideranças que desejam prevenir adoecimento</li>
+            <li>Organizações com riscos psicossociais</li>
           </ul>
         </article>
         
-        <article class="card">
-          <h3>🔹 Profissionais da Saúde</h3>
-          <ul style="margin-top:12px;">
+        <!-- Card 3 -->
+        <article class="card reveal" style="transition-delay: 0.2s;">
+           <div class="icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <h3>Profissionais da Saúde</h3>
+          <ul>
             <li>Capacitação e orientação técnica</li>
             <li>Materiais educativos e e-books especializados</li>
+            <li>Protocolos de atendimento</li>
           </ul>
         </article>
       </div>
@@ -135,142 +282,143 @@
   </section>
 
   <!-- SEÇÃO 4: SERVIÇOS -->
-  <section class="section" aria-labelledby="servicos-title">
+  <section id="servicos" class="section" style="background: white;">
     <div class="container">
-      <h2 id="servicos-title" class="headline fade" style="animation-delay:.1s">Serviços</h2>
+      <div class="center reveal" style="margin-bottom: 60px;">
+        <h2 class="headline">Serviços Especializados</h2>
+        <p class="subheadline">Soluções práticas e acolhedoras para cada necessidade</p>
+      </div>
       
-      <div style="max-width:900px;margin:32px auto;" class="fade" style="animation-delay:.2s">
-        <article class="card" style="margin-bottom:24px;">
-          <h3>🧠 Atendimento Individual e Orientação Psicossocial</h3>
-          <ul>
-            <li>Escuta qualificada</li>
-            <li>Orientação emocional e comportamental</li>
-            <li>Acompanhamento estruturado para dependência em jogos/apostas</li>
-          </ul>
+      <div class="grid">
+        <article class="card reveal">
+          <h3>🧠 Atendimento Individual</h3>
+          <p class="body-text" style="font-size: 15px;">Escuta qualificada e orientação emocional e comportamental. Acompanhamento estruturado para dependência em jogos/apostas.</p>
         </article>
         
-        <article class="card" style="margin-bottom:24px;">
-          <h3>🎯 Mentoria e Orientação para Famílias</h3>
-          <ul>
-            <li>Apoio emocional</li>
-            <li>Estratégias práticas de convivência</li>
-            <li>Redução de conflitos, culpa e exaustão emocional</li>
-          </ul>
+        <article class="card reveal">
+          <h3>🎯 Mentoria para Famílias</h3>
+          <p class="body-text" style="font-size: 15px;">Apoio emocional e estratégias práticas de convivência para redução de conflitos, culpa e exaustão emocional familiar.</p>
         </article>
         
-        <article class="card" style="margin-bottom:24px;">
-          <h3>🏢 Consultoria Empresarial – Implantação da NR-1</h3>
-          <ul>
-            <li>Diagnóstico de riscos psicossociais</li>
-            <li>Apoio na adequação às exigências legais</li>
-            <li>Estratégias de prevenção ao adoecimento mental</li>
-            <li>Ações educativas e sensibilização de equipes</li>
-          </ul>
-          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--neutral-200);">
-            <p style="font-weight:600;margin:0 0 8px;color:var(--neutral-900);">Benefícios:</p>
-            <p style="margin:4px 0;">✔ Redução de afastamentos</p>
-            <p style="margin:4px 0;">✔ Prevenção de passivos trabalhistas</p>
-            <p style="margin:4px 0;">✔ Melhoria do clima organizacional</p>
+        <article class="card reveal">
+          <h3>🏢 Consultoria NR-1</h3>
+          <p class="body-text" style="font-size: 15px;">Diagnóstico de riscos, adequação legal, estratégias de prevenção e ações educativas para empresas.</p>
+          <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--neutral-100); font-size:14px; font-weight:600; color:var(--accent);">
+            + Redução de afastamentos e passivos
           </div>
         </article>
         
-        <article class="card">
-          <h3>📘 Produção de Conteúdo e Capacitação</h3>
-          <ul>
-            <li>E-books educativos</li>
-            <li>Materiais técnicos para profissionais</li>
-            <li>Palestras e ações de conscientização</li>
-          </ul>
+        <article class="card reveal">
+          <h3>📘 Produção de Conteúdo</h3>
+          <p class="body-text" style="font-size: 15px;">Desenvolvimento de e-books educativos, materiais técnicos, palestras e ações de conscientização.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO 5: RESULTADOS E IMPACTOS -->
-  <section class="section" aria-labelledby="resultados-title">
+  <!-- SEÇÃO 5: RESULTADOS -->
+  <section id="resultados" class="section" style="background: var(--primary); color: white;">
     <div class="container center">
-      <h2 id="resultados-title" class="headline fade" style="animation-delay:.1s">Resultados e Impactos</h2>
-      <p class="subheadline fade" style="animation-delay:.2s">O que meu trabalho promove:</p>
-      
-      <div style="max-width:700px;margin:32px auto;" class="fade" style="animation-delay:.25s">
-        <div class="bullet" style="margin-bottom:12px;">✔ Pessoas que retomam o controle da própria vida</div>
-        <div class="bullet" style="margin-bottom:12px;">✔ Famílias que aprendem a lidar sem adoecer juntas</div>
-        <div class="bullet" style="margin-bottom:12px;">✔ Empresas mais humanas, produtivas e seguras</div>
-        <div class="bullet" style="margin-bottom:12px;">✔ Redução de riscos legais e psicossociais</div>
-        <div class="bullet" style="margin-bottom:12px;">✔ Ambientes onde falar de saúde mental deixa de ser tabu</div>
-        
-        <div class="card" style="margin-top:24px;border-left:4px solid var(--accent);">
-          <p style="margin:0;font-weight:600;color:var(--neutral-900);">💡 Resultados não são apenas números.<br>São vidas reorganizadas.</p>
+      <h2 class="headline reveal" style="color:white;">Resultados e Impactos</h2>
+      <div class="grid reveal" style="margin-top: 40px; text-align: left;">
+        <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: 12px;">
+            <p style="margin:0; font-size: 18px;">✔ Pessoas retomando o controle da vida</p>
         </div>
+        <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: 12px;">
+            <p style="margin:0; font-size: 18px;">✔ Famílias aprendendo a lidar sem adoecer</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: 12px;">
+            <p style="margin:0; font-size: 18px;">✔ Empresas mais humanas e seguras</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: 12px;">
+            <p style="margin:0; font-size: 18px;">✔ Ambiente sem tabus sobre saúde mental</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top: 40px; font-size: 20px; font-weight: 600; font-style: italic; opacity: 0.9;">
+        "Resultados não são apenas números. São vidas reorganizadas."
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO 6: AUTORIDADE E CONHECIMENTO -->
-  <section class="section" aria-labelledby="ebooks-title">
+  <!-- SEÇÃO 6: EBOOKS -->
+  <section id="autoridade" class="section">
     <div class="container">
-      <h2 id="ebooks-title" class="headline fade" style="animation-delay:.1s">Autoridade e Conhecimento</h2>
-      <p class="subheadline fade" style="animation-delay:.2s">Sou autora de dois e-books:</p>
-      
-      <div class="grid fade" style="animation-delay:.25s">
-        <article class="card">
-          <h3 style="font-size:20px;color:var(--accent);">📕 Projeto Game Over</h3>
-          <p class="body-text" style="margin:12px 0;">Para pessoas e famílias afetadas por jogos e apostas online</p>
-          <p class="muted" style="font-size:14px;margin-top:12px;">Orientação prática, redução de culpa e reorganização.</p>
-        </article>
-        
-        <article class="card">
-          <h3 style="font-size:20px;color:var(--accent);">📘 Ludomania em Foco</h3>
-          <p class="body-text" style="margin:12px 0;">Capacitação técnica para profissionais da saúde mental</p>
-          <p class="muted" style="font-size:14px;margin-top:12px;">Conceitos, diagnóstico e protocolo de atendimento.</p>
-        </article>
+      <div class="center reveal">
+        <h2 class="headline">Autoridade e Conhecimento</h2>
+        <p class="subheadline">E-books de minha autoria</p>
       </div>
       
-      <div style="max-width:700px;margin:32px auto 0;" class="fade" style="animation-delay:.3s">
-        <p class="body-text" style="font-weight:600;margin-bottom:12px;">Ambos desenvolvidos com base em:</p>
-        <ul style="margin:0;padding-left:24px;">
-          <li>Experiência prática</li>
-          <li>Estudos clínicos</li>
-          <li>Linguagem acessível e humana</li>
-        </ul>
-        <div style="text-align:center;margin-top:24px;">
-          <a href="https://wa.me/5514997439364?text=Quero conhecer os e-books" class="cta fade" style="animation-delay:.35s">Conheça os e-books</a>
+      <div class="grid reveal" style="margin-top: 40px;">
+        <div class="card" style="border-top: 4px solid var(--accent);">
+          <h3 style="color: var(--accent);">📕 Projeto Game Over</h3>
+          <p>Para pessoas e famílias afetadas por jogos e apostas online.</p>
+          <p class="muted" style="font-size:14px;">Orientação prática, redução de culpa e reorganização.</p>
         </div>
+        <div class="card" style="border-top: 4px solid var(--primary);">
+          <h3 style="color: var(--primary);">📘 Ludomania em Foco</h3>
+          <p>Capacitação técnica para profissionais da saúde mental.</p>
+          <p class="muted" style="font-size:14px;">Conceitos, diagnóstico e protocolo de atendimento.</p>
+        </div>
+      </div>
+
+      <div class="center reveal" style="margin-top: 40px;">
+        <a href="https://wa.me/5514997439364?text=Quero conhecer os e-books" class="cta">Conheça os e-books</a>
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO 7: POSICIONAMENTO -->
-  <section class="section center" aria-labelledby="posicionamento-title">
-    <div class="container center">
-      <h2 id="posicionamento-title" class="headline fade" style="animation-delay:.1s;max-width:700px;margin-left:auto;margin-right:auto;font-size:32px;">
-        "Saúde mental não é fraqueza.<br>É responsabilidade individual, social e empresarial."
+  <!-- SEÇÃO 7: QUOTE -->
+  <section class="section center" style="padding: 120px 0; background-image: radial-gradient(#D35400 1px, transparent 1px); background-size: 20px 20px; background-color: #FAF9F6;">
+    <div class="container">
+      <h2 class="headline reveal" style="max-width:800px; margin:0 auto;">
+        "Saúde mental não é fraqueza. É responsabilidade individual, social e empresarial."
       </h2>
     </div>
   </section>
 
   <!-- SEÇÃO 8: CTA FINAL -->
-  <section class="section center" aria-labelledby="cta-final-title">
+  <section id="contato" class="section center" style="background: white;">
     <div class="container">
-      <h2 id="cta-final-title" class="headline fade" style="animation-delay:.1s">Você não precisa enfrentar isso sozinho(a).</h2>
-      <p class="body-text fade" style="animation-delay:.2s;max-width:700px;margin-left:auto;margin-right:auto;">Seja para cuidar da sua saúde mental, ajudar alguém que você ama, ou adequar sua empresa à NR-1, existe um caminho possível, ético e humano.</p>
+      <h2 class="headline reveal">Você não precisa enfrentar isso sozinho(a).</h2>
+      <p class="body-text reveal" style="max-width:700px; margin: 0 auto 32px;">Seja para cuidar da sua saúde mental, ajudar alguém que você ama, ou adequar sua empresa à NR-1, existe um caminho possível, ético e humano.</p>
       
-      <div style="margin:32px 0;" class="fade" style="animation-delay:.25s">
-        <p style="font-size:16px;margin:8px 0;color:var(--neutral-700);">📲 Entre em contato agora</p>
-        <p style="font-size:16px;margin:8px 0;color:var(--neutral-700);">📩 Atendimento humanizado e sigiloso</p>
-      </div>
-      
-      <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria" class="cta fade" style="animation-delay:.3s">Falar com Mayra Moraes</a>
+      <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria" class="cta reveal">Falar com Mayra Moraes</a>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="section" role="contentinfo">
-    <div class="container center">
-      <p class="muted" style="font-size:14px;margin-bottom:12px;">Este site não substitui acompanhamento médico/psicológico. Em casos de emergência, procure atendimento imediato.</p>
-      <p class="muted">© 2026 Mayra Moraes. Todos os direitos reservados.</p>
+  <footer>
+    <div class="container">
+      <p style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Mayra Moraes</p>
+      <p>Este site não substitui acompanhamento médico/psicológico. Em casos de emergência, procure atendimento imediato.</p>
+      <p style="margin-top: 24px;">© 2026 Mayra Moraes. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <script>
+    // Reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOptions = {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealOnScroll = new IntersectionObserver(function(entries, revealOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('active');
+          revealOnScroll.unobserve(entry.target);
+        }
+      });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+      revealOnScroll.observe(el);
+    });
+  </script>
 
   <script type="application/ld+json">
   {
